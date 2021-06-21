@@ -1160,7 +1160,7 @@ namespace TDHelper
         private void EnableBtnStarts()
         {
             // reenable other controls when done
-            string[] exceptions = new string[] { "btnStationInfo" };
+            string[] exceptions = new string[] { "btnStationInfo", "btnMiniMode" };
 
             // Enable all the buttons not found in the exceptions array.
             foreach (Button button in panMethods.Controls.OfType<Button>()
@@ -1179,6 +1179,7 @@ namespace TDHelper
             btnStart.Text = "Start";
 
             SetStationInfoButtonState();
+            SetMiniModeButtonState();
         }
 
         /// <summary>
@@ -4156,6 +4157,14 @@ namespace TDHelper
                 // ...otherwise it should be disabled.
                 btnStationInfo.Enabled = false;
             }
+        }
+
+        /// <summary>
+        /// Set the state of the Mini Mode Button.
+        /// </summary>
+        private void SetMiniModeButtonState()
+        {
+            btnMiniMode.Enabled = tv_outputBox != String.Empty;
         }
 
         /// <summary>
