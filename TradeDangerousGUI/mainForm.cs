@@ -3578,6 +3578,10 @@ namespace TDHelper
             {
                 TargetSystem = RemoveExtraWhitespace(destination);
             }
+            else
+            {
+                TargetSystem = string.Empty;
+            }
         }
 
         /// <summary>
