@@ -512,7 +512,10 @@ namespace TDHelper
                         .OrderByDescending(x => x)
                         .First();
 
-                    if (installedVersion != currentVersion)
+                    Version current = new Version(currentVersion);
+                    Version installed = new Version(installedVersion);
+
+                    if (installed.CompareTo(current) < 0)
                     {
                         DialogResult result = MessageBox.Show(
                             "New tradedangerous version available. Upgrade now?",
