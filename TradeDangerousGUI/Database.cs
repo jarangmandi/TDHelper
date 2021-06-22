@@ -2057,6 +2057,7 @@ namespace TDHelper
             SourceList.AddRange(output_unclean.ToArray());
 
             // Clone the source list to the destination list.
+            DestinationList.Clear();
             DestinationList.AddRange(SourceList.GetRange(0, SourceList.Count));
         }
 
