@@ -1021,7 +1021,7 @@ namespace TDHelper
         private void StackCircularBuffer(string input)
         {
             // here we generate our buffer to be consumed
-            if (input.Length > circularBuffer.Capacity)
+            if (input.Length > circularBufferSize)
             {
                 // if the input is bigger than our buffer size, toss what doesn't fit
                 circularBuffer = new StringBuilder(circularBufferSize);
