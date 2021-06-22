@@ -190,6 +190,7 @@ namespace TDHelper
                 settings.Demand = GetDecimalSetting(configSection, "Demand");
                 settings.EndJumps = GetDecimalSetting(configSection, "EndJumps");
                 settings.ExtraRunParams = GetStringSetting(configSection, "ExtraRunParams");
+                settings.FleetCarriers = GetStringSetting(configSection, "FleetCarriers");
                 settings.GPT = GetDecimalSetting(configSection, "GPT");
                 settings.Hops = GetDecimalSetting(configSection, "Hops");
                 settings.IncludeInsurance = GetBooleanSetting(configSection, "IncludeInsurance", true);
@@ -324,6 +325,7 @@ namespace TDHelper
             configSection["Demand"].DecimalValue = settings.Demand;
             configSection["EndJumps"].DecimalValue = settings.EndJumps;
             configSection["ExtraRunParams"].StringValue = settings.ExtraRunParams ?? string.Empty;
+            configSection["FleetCarriers"].StringValue = settings.FleetCarriers ?? string.Empty;
             configSection["GPT"].DecimalValue = settings.GPT;
             configSection["Hops"].DecimalValue = settings.Hops;
             configSection["IncludeInsurance"].BoolValue = settings.IncludeInsurance;
@@ -722,6 +724,11 @@ namespace TDHelper
             return ToggleAndSort(text, PLANETARY_FILTER);
         }
 
+        private string ContainsFleetCarriers(string text)
+        {
+            return ToggleAndSort(text, FLEET_CARRIERS_FILTER);
+        }
+
         private bool IsMarkedStation(
             string input,
             List<string> parentList)
@@ -894,6 +901,7 @@ namespace TDHelper
         public bool DoNotUpdate { get; set; }
         public decimal EndJumps { get; set; }
         public string ExtraRunParams { get; set; }
+        public string FleetCarriers { get; set; }
         public decimal GPT { get; set; }
         public bool HasUpdated { get; set; }
         public decimal Hops { get; set; }
@@ -984,6 +992,7 @@ namespace TDHelper
             instance.DoNotUpdate = false;
             instance.EndJumps = 0;
             instance.ExtraRunParams = string.Empty;
+            instance.FleetCarriers = string.Empty;
             instance.GPT = 0;
             instance.HasUpdated = false;
             instance.Hops = 0;

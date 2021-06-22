@@ -257,10 +257,22 @@
             this.lblOldDataOptionsMaxLSDistance = new System.Windows.Forms.Label();
             this.lblOldDataOptionsPlanetary = new System.Windows.Forms.Label();
             this.txtOldDataOptionsPlanetary = new System.Windows.Forms.TextBox();
-            this.cboCommandersShips = new SeparatorComboBox.SeparatorComboBox();
-            this.cboBuyOptionsCommodities = new TDHelper.CheckedComboBox();
             this.lblOldDataOptionsPads = new System.Windows.Forms.Label();
             this.txtOldDataOptionsPads = new System.Windows.Forms.TextBox();
+            this.lblRunOptionsFleetCarriers = new System.Windows.Forms.Label();
+            this.txtRunOptionsFleetCarriers = new System.Windows.Forms.TextBox();
+            this.lblLocalOptionsFleetCarriers = new System.Windows.Forms.Label();
+            this.txtLocalOptionsFleetCarriers = new System.Windows.Forms.TextBox();
+            this.lblRaresOptionsFleetCarriers = new System.Windows.Forms.Label();
+            this.txtRaresOptionsFleetCarriers = new System.Windows.Forms.TextBox();
+            this.lblSellOptionsFleetCarriers = new System.Windows.Forms.Label();
+            this.txtSellOptionsFleetCarriers = new System.Windows.Forms.TextBox();
+            this.lblBuyOptionsFleetCarriers = new System.Windows.Forms.Label();
+            this.txtBuyOptionsFleetCarriers = new System.Windows.Forms.TextBox();
+            this.lblNavOptionsFleetCarriers = new System.Windows.Forms.Label();
+            this.txtNavOptionsFleetCarriers = new System.Windows.Forms.TextBox();
+            this.lblOldDataOptionsFleetCarriers = new System.Windows.Forms.Label();
+            this.txtOldDataOptionsFleetCarriers = new System.Windows.Forms.TextBox();
             this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker4 = new System.ComponentModel.BackgroundWorker();
             this.panRunOptions = new System.Windows.Forms.Panel();
@@ -317,6 +329,8 @@
             this.panOldDataOptions = new System.Windows.Forms.Panel();
             this.panLocalOptions = new System.Windows.Forms.Panel();
             this.panOptions = new System.Windows.Forms.Panel();
+            this.cboCommandersShips = new SeparatorComboBox.SeparatorComboBox();
+            this.cboBuyOptionsCommodities = new TDHelper.CheckedComboBox();
             this.mnuSetValues.SuspendLayout();
             this.mnuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numRunOptionsRoutes)).BeginInit();
@@ -390,7 +404,6 @@
             this.panTradeOptions.SuspendLayout();
             this.panMarketOptions.SuspendLayout();
             this.grpMarketOptionsType.SuspendLayout();
-            this.panShipVendorOptions.SuspendLayout();
             this.panNavOptions.SuspendLayout();
             this.panOldDataOptions.SuspendLayout();
             this.panLocalOptions.SuspendLayout();
@@ -460,77 +473,77 @@
             this.mnuSetValues.Name = "contextMenuStrip1";
             this.mnuSetValues.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.mnuSetValues.ShowImageMargin = false;
-            this.mnuSetValues.Size = new System.Drawing.Size(110, 198);
+            this.mnuSetValues.Size = new System.Drawing.Size(109, 198);
             this.mnuSetValues.Opening += new System.ComponentModel.CancelEventHandler(this.EventHandler_SetValuesMenu_Opening);
             // 
             // mnuLadenLY
             // 
             this.mnuLadenLY.Name = "mnuLadenLY";
-            this.mnuLadenLY.Size = new System.Drawing.Size(109, 22);
+            this.mnuLadenLY.Size = new System.Drawing.Size(108, 22);
             this.mnuLadenLY.Text = "Laden LY";
             this.mnuLadenLY.Click += new System.EventHandler(this.EventHandler_DistanceMenuItem_Click);
             // 
             // mnuUnladenLY
             // 
             this.mnuUnladenLY.Name = "mnuUnladenLY";
-            this.mnuUnladenLY.Size = new System.Drawing.Size(109, 22);
+            this.mnuUnladenLY.Size = new System.Drawing.Size(108, 22);
             this.mnuUnladenLY.Text = "Unladen LY";
             this.mnuUnladenLY.Click += new System.EventHandler(this.EventHandler_DistanceMenuItem_Click);
             // 
             // mnuSep2
             // 
             this.mnuSep2.Name = "mnuSep2";
-            this.mnuSep2.Size = new System.Drawing.Size(106, 6);
+            this.mnuSep2.Size = new System.Drawing.Size(105, 6);
             // 
             // mnuCapacity
             // 
             this.mnuCapacity.Name = "mnuCapacity";
-            this.mnuCapacity.Size = new System.Drawing.Size(109, 22);
+            this.mnuCapacity.Size = new System.Drawing.Size(108, 22);
             this.mnuCapacity.Text = "Capacity";
             this.mnuCapacity.Click += new System.EventHandler(this.EventHandler_DistanceMenuItem_Click);
             // 
             // mnuSep3
             // 
             this.mnuSep3.Name = "mnuSep3";
-            this.mnuSep3.Size = new System.Drawing.Size(106, 6);
+            this.mnuSep3.Size = new System.Drawing.Size(105, 6);
             // 
             // mnuCut1
             // 
             this.mnuCut1.Name = "mnuCut1";
-            this.mnuCut1.Size = new System.Drawing.Size(109, 22);
+            this.mnuCut1.Size = new System.Drawing.Size(108, 22);
             this.mnuCut1.Text = "Cut";
             this.mnuCut1.Click += new System.EventHandler(this.EventHandler_Cut1_Click);
             // 
             // mnuCopy1
             // 
             this.mnuCopy1.Name = "mnuCopy1";
-            this.mnuCopy1.Size = new System.Drawing.Size(109, 22);
+            this.mnuCopy1.Size = new System.Drawing.Size(108, 22);
             this.mnuCopy1.Text = "Copy";
             this.mnuCopy1.Click += new System.EventHandler(this.EventHandler_Copy1_Click);
             // 
             // mnuPaste1
             // 
             this.mnuPaste1.Name = "mnuPaste1";
-            this.mnuPaste1.Size = new System.Drawing.Size(109, 22);
+            this.mnuPaste1.Size = new System.Drawing.Size(108, 22);
             this.mnuPaste1.Text = "Paste";
             this.mnuPaste1.Click += new System.EventHandler(this.EventHandler_Paste1_Click);
             // 
             // mnuSelectAll1
             // 
             this.mnuSelectAll1.Name = "mnuSelectAll1";
-            this.mnuSelectAll1.Size = new System.Drawing.Size(109, 22);
+            this.mnuSelectAll1.Size = new System.Drawing.Size(108, 22);
             this.mnuSelectAll1.Text = "Select All";
             this.mnuSelectAll1.Click += new System.EventHandler(this.EventHandler_SelectAll1_Click);
             // 
             // mnuSep4
             // 
             this.mnuSep4.Name = "mnuSep4";
-            this.mnuSep4.Size = new System.Drawing.Size(106, 6);
+            this.mnuSep4.Size = new System.Drawing.Size(105, 6);
             // 
             // mnuReset
             // 
             this.mnuReset.Name = "mnuReset";
-            this.mnuReset.Size = new System.Drawing.Size(109, 22);
+            this.mnuReset.Size = new System.Drawing.Size(108, 22);
             this.mnuReset.Text = "Reset";
             this.mnuReset.Click += new System.EventHandler(this.EventHandler_DistanceMenuItem_Click);
             // 
@@ -644,21 +657,21 @@
             this.mnuStrip1.Name = "contextMenuStrip1";
             this.mnuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.mnuStrip1.ShowImageMargin = false;
-            this.mnuStrip1.Size = new System.Drawing.Size(123, 308);
+            this.mnuStrip1.Size = new System.Drawing.Size(121, 308);
             this.mnuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.EventHandler_ContextMenuStrip1_Opening);
             // 
             // mnuCut
             // 
             this.mnuCut.Enabled = false;
             this.mnuCut.Name = "mnuCut";
-            this.mnuCut.Size = new System.Drawing.Size(122, 22);
+            this.mnuCut.Size = new System.Drawing.Size(120, 22);
             this.mnuCut.Text = "Cut";
             this.mnuCut.Click += new System.EventHandler(this.EventHandler_CutMenuItem_Click);
             // 
             // mnuCopy
             // 
             this.mnuCopy.Name = "mnuCopy";
-            this.mnuCopy.Size = new System.Drawing.Size(122, 22);
+            this.mnuCopy.Size = new System.Drawing.Size(120, 22);
             this.mnuCopy.Text = "Copy";
             this.mnuCopy.Click += new System.EventHandler(this.EventHandler_CopyMenuItem_Click);
             // 
@@ -666,7 +679,7 @@
             // 
             this.mnuPaste.Enabled = false;
             this.mnuPaste.Name = "mnuPaste";
-            this.mnuPaste.Size = new System.Drawing.Size(122, 22);
+            this.mnuPaste.Size = new System.Drawing.Size(120, 22);
             this.mnuPaste.Text = "Paste";
             this.mnuPaste.Click += new System.EventHandler(this.EventHandler_PasteMenuItem_Click);
             // 
@@ -674,27 +687,27 @@
             // 
             this.mnuDelete.Enabled = false;
             this.mnuDelete.Name = "mnuDelete";
-            this.mnuDelete.Size = new System.Drawing.Size(122, 22);
+            this.mnuDelete.Size = new System.Drawing.Size(120, 22);
             this.mnuDelete.Text = "Delete";
             this.mnuDelete.Click += new System.EventHandler(this.EventHandler_DeleteMenuItem_Click);
             // 
             // sepSeparator3
             // 
             this.sepSeparator3.Name = "sepSeparator3";
-            this.sepSeparator3.Size = new System.Drawing.Size(119, 6);
+            this.sepSeparator3.Size = new System.Drawing.Size(117, 6);
             // 
             // mnuSavePage1
             // 
             this.mnuSavePage1.Enabled = false;
             this.mnuSavePage1.Name = "mnuSavePage1";
-            this.mnuSavePage1.Size = new System.Drawing.Size(122, 22);
+            this.mnuSavePage1.Size = new System.Drawing.Size(120, 22);
             this.mnuSavePage1.Text = "Save to #1";
             this.mnuSavePage1.Click += new System.EventHandler(this.EventHandler_SavePage1MenuItem_Click);
             // 
             // nmuClearSaved1
             // 
             this.nmuClearSaved1.Name = "nmuClearSaved1";
-            this.nmuClearSaved1.Size = new System.Drawing.Size(122, 22);
+            this.nmuClearSaved1.Size = new System.Drawing.Size(120, 22);
             this.nmuClearSaved1.Text = "Clear #1";
             this.nmuClearSaved1.Visible = false;
             this.nmuClearSaved1.Click += new System.EventHandler(this.EventHandler_ClearSaved1MenuItem_Click);
@@ -703,14 +716,14 @@
             // 
             this.mnuSavePage2.Enabled = false;
             this.mnuSavePage2.Name = "mnuSavePage2";
-            this.mnuSavePage2.Size = new System.Drawing.Size(122, 22);
+            this.mnuSavePage2.Size = new System.Drawing.Size(120, 22);
             this.mnuSavePage2.Text = "Save to #2";
             this.mnuSavePage2.Click += new System.EventHandler(this.EventHandler_SavePage2MenuItem_Click);
             // 
             // mnuClearSaved2
             // 
             this.mnuClearSaved2.Name = "mnuClearSaved2";
-            this.mnuClearSaved2.Size = new System.Drawing.Size(122, 22);
+            this.mnuClearSaved2.Size = new System.Drawing.Size(120, 22);
             this.mnuClearSaved2.Text = "Clear #2";
             this.mnuClearSaved2.Visible = false;
             this.mnuClearSaved2.Click += new System.EventHandler(this.EventHandler_ClearSaved2MenuItem_Click);
@@ -719,14 +732,14 @@
             // 
             this.mnuSavePage3.Enabled = false;
             this.mnuSavePage3.Name = "mnuSavePage3";
-            this.mnuSavePage3.Size = new System.Drawing.Size(122, 22);
+            this.mnuSavePage3.Size = new System.Drawing.Size(120, 22);
             this.mnuSavePage3.Text = "Save to #3";
             this.mnuSavePage3.Click += new System.EventHandler(this.EventHandler_SavePage3MenuItem_Click);
             // 
             // mnuClearSaved3
             // 
             this.mnuClearSaved3.Name = "mnuClearSaved3";
-            this.mnuClearSaved3.Size = new System.Drawing.Size(122, 22);
+            this.mnuClearSaved3.Size = new System.Drawing.Size(120, 22);
             this.mnuClearSaved3.Text = "Clear #3";
             this.mnuClearSaved3.Visible = false;
             this.mnuClearSaved3.Click += new System.EventHandler(this.EventHandler_ClearSaved3MenuItem_Click);
@@ -734,19 +747,19 @@
             // sepSeparator2
             // 
             this.sepSeparator2.Name = "sepSeparator2";
-            this.sepSeparator2.Size = new System.Drawing.Size(119, 6);
+            this.sepSeparator2.Size = new System.Drawing.Size(117, 6);
             // 
             // mnuPushNotes
             // 
             this.mnuPushNotes.Name = "mnuPushNotes";
-            this.mnuPushNotes.Size = new System.Drawing.Size(122, 22);
+            this.mnuPushNotes.Size = new System.Drawing.Size(120, 22);
             this.mnuPushNotes.Text = "Add To Notes";
             this.mnuPushNotes.Click += new System.EventHandler(this.EventHandler_PushNotesMenuItem_Click);
             // 
             // mnuNotesClear
             // 
             this.mnuNotesClear.Name = "mnuNotesClear";
-            this.mnuNotesClear.Size = new System.Drawing.Size(122, 22);
+            this.mnuNotesClear.Size = new System.Drawing.Size(120, 22);
             this.mnuNotesClear.Text = "Clear Notes";
             this.mnuNotesClear.Visible = false;
             this.mnuNotesClear.Click += new System.EventHandler(this.EventHandler_NotesClearMenuItem_Click);
@@ -754,12 +767,12 @@
             // sepSeparator1
             // 
             this.sepSeparator1.Name = "sepSeparator1";
-            this.sepSeparator1.Size = new System.Drawing.Size(119, 6);
+            this.sepSeparator1.Size = new System.Drawing.Size(117, 6);
             // 
             // mnuSelectAll
             // 
             this.mnuSelectAll.Name = "mnuSelectAll";
-            this.mnuSelectAll.Size = new System.Drawing.Size(122, 22);
+            this.mnuSelectAll.Size = new System.Drawing.Size(120, 22);
             this.mnuSelectAll.Text = "Select All";
             this.mnuSelectAll.Click += new System.EventHandler(this.EventHandler_SelectMenuItem_Click);
             // 
@@ -1676,7 +1689,7 @@
             // lblBuyOptionsPlanetary
             // 
             this.lblBuyOptionsPlanetary.AutoSize = true;
-            this.lblBuyOptionsPlanetary.Location = new System.Drawing.Point(7, 111);
+            this.lblBuyOptionsPlanetary.Location = new System.Drawing.Point(4, 140);
             this.lblBuyOptionsPlanetary.Name = "lblBuyOptionsPlanetary";
             this.lblBuyOptionsPlanetary.Size = new System.Drawing.Size(54, 13);
             this.lblBuyOptionsPlanetary.TabIndex = 75;
@@ -1686,7 +1699,7 @@
             // txtBuyOptionsPlanetary
             // 
             this.txtBuyOptionsPlanetary.ContextMenuStrip = this.mnuSetValues;
-            this.txtBuyOptionsPlanetary.Location = new System.Drawing.Point(70, 108);
+            this.txtBuyOptionsPlanetary.Location = new System.Drawing.Point(64, 137);
             this.txtBuyOptionsPlanetary.MaxLength = 3;
             this.txtBuyOptionsPlanetary.Name = "txtBuyOptionsPlanetary";
             this.txtBuyOptionsPlanetary.Size = new System.Drawing.Size(32, 20);
@@ -1710,7 +1723,7 @@
             // lblBuyOptionsPads
             // 
             this.lblBuyOptionsPads.AutoSize = true;
-            this.lblBuyOptionsPads.Location = new System.Drawing.Point(112, 112);
+            this.lblBuyOptionsPads.Location = new System.Drawing.Point(242, 141);
             this.lblBuyOptionsPads.Name = "lblBuyOptionsPads";
             this.lblBuyOptionsPads.Size = new System.Drawing.Size(34, 13);
             this.lblBuyOptionsPads.TabIndex = 78;
@@ -1720,7 +1733,7 @@
             // txtBuyOptionsPads
             // 
             this.txtBuyOptionsPads.ContextMenuStrip = this.mnuSetValues;
-            this.txtBuyOptionsPads.Location = new System.Drawing.Point(152, 109);
+            this.txtBuyOptionsPads.Location = new System.Drawing.Point(282, 137);
             this.txtBuyOptionsPads.MaxLength = 3;
             this.txtBuyOptionsPads.Name = "txtBuyOptionsPads";
             this.txtBuyOptionsPads.Size = new System.Drawing.Size(32, 20);
@@ -1950,7 +1963,7 @@
             // lblSellOptionsPads
             // 
             this.lblSellOptionsPads.AutoSize = true;
-            this.lblSellOptionsPads.Location = new System.Drawing.Point(112, 112);
+            this.lblSellOptionsPads.Location = new System.Drawing.Point(242, 139);
             this.lblSellOptionsPads.Name = "lblSellOptionsPads";
             this.lblSellOptionsPads.Size = new System.Drawing.Size(34, 13);
             this.lblSellOptionsPads.TabIndex = 78;
@@ -1986,7 +1999,7 @@
             // txtSellOptionsPads
             // 
             this.txtSellOptionsPads.ContextMenuStrip = this.mnuSetValues;
-            this.txtSellOptionsPads.Location = new System.Drawing.Point(152, 109);
+            this.txtSellOptionsPads.Location = new System.Drawing.Point(282, 136);
             this.txtSellOptionsPads.MaxLength = 3;
             this.txtSellOptionsPads.Name = "txtSellOptionsPads";
             this.txtSellOptionsPads.Size = new System.Drawing.Size(32, 20);
@@ -2008,7 +2021,7 @@
             // lblSellOptionsPlanetary
             // 
             this.lblSellOptionsPlanetary.AutoSize = true;
-            this.lblSellOptionsPlanetary.Location = new System.Drawing.Point(7, 111);
+            this.lblSellOptionsPlanetary.Location = new System.Drawing.Point(8, 138);
             this.lblSellOptionsPlanetary.Name = "lblSellOptionsPlanetary";
             this.lblSellOptionsPlanetary.Size = new System.Drawing.Size(54, 13);
             this.lblSellOptionsPlanetary.TabIndex = 75;
@@ -2018,7 +2031,7 @@
             // txtSellOptionsPlanetary
             // 
             this.txtSellOptionsPlanetary.ContextMenuStrip = this.mnuSetValues;
-            this.txtSellOptionsPlanetary.Location = new System.Drawing.Point(70, 108);
+            this.txtSellOptionsPlanetary.Location = new System.Drawing.Point(68, 135);
             this.txtSellOptionsPlanetary.MaxLength = 3;
             this.txtSellOptionsPlanetary.Name = "txtSellOptionsPlanetary";
             this.txtSellOptionsPlanetary.Size = new System.Drawing.Size(32, 20);
@@ -2195,7 +2208,7 @@
             // lblRaresOptionsPlanetary
             // 
             this.lblRaresOptionsPlanetary.AutoSize = true;
-            this.lblRaresOptionsPlanetary.Location = new System.Drawing.Point(219, 33);
+            this.lblRaresOptionsPlanetary.Location = new System.Drawing.Point(222, 33);
             this.lblRaresOptionsPlanetary.Name = "lblRaresOptionsPlanetary";
             this.lblRaresOptionsPlanetary.Size = new System.Drawing.Size(54, 13);
             this.lblRaresOptionsPlanetary.TabIndex = 75;
@@ -2478,7 +2491,7 @@
             // lblNavOptionsRefuelJumps
             // 
             this.lblNavOptionsRefuelJumps.AutoSize = true;
-            this.lblNavOptionsRefuelJumps.Location = new System.Drawing.Point(64, 109);
+            this.lblNavOptionsRefuelJumps.Location = new System.Drawing.Point(62, 115);
             this.lblNavOptionsRefuelJumps.Name = "lblNavOptionsRefuelJumps";
             this.lblNavOptionsRefuelJumps.Size = new System.Drawing.Size(74, 13);
             this.lblNavOptionsRefuelJumps.TabIndex = 43;
@@ -2488,7 +2501,7 @@
             // numNavOptionsRefuelJumps
             // 
             this.numNavOptionsRefuelJumps.ContextMenuStrip = this.mnuSetValues;
-            this.numNavOptionsRefuelJumps.Location = new System.Drawing.Point(144, 107);
+            this.numNavOptionsRefuelJumps.Location = new System.Drawing.Point(142, 112);
             this.numNavOptionsRefuelJumps.Name = "numNavOptionsRefuelJumps";
             this.numNavOptionsRefuelJumps.Size = new System.Drawing.Size(53, 20);
             this.numNavOptionsRefuelJumps.TabIndex = 2;
@@ -2555,7 +2568,7 @@
             // lblNavOptionsPads
             // 
             this.lblNavOptionsPads.AutoSize = true;
-            this.lblNavOptionsPads.Location = new System.Drawing.Point(241, 113);
+            this.lblNavOptionsPads.Location = new System.Drawing.Point(241, 144);
             this.lblNavOptionsPads.Name = "lblNavOptionsPads";
             this.lblNavOptionsPads.Size = new System.Drawing.Size(34, 13);
             this.lblNavOptionsPads.TabIndex = 82;
@@ -2565,7 +2578,7 @@
             // txtNavOptionsPads
             // 
             this.txtNavOptionsPads.ContextMenuStrip = this.mnuSetValues;
-            this.txtNavOptionsPads.Location = new System.Drawing.Point(281, 110);
+            this.txtNavOptionsPads.Location = new System.Drawing.Point(281, 141);
             this.txtNavOptionsPads.MaxLength = 3;
             this.txtNavOptionsPads.Name = "txtNavOptionsPads";
             this.txtNavOptionsPads.Size = new System.Drawing.Size(32, 20);
@@ -2577,7 +2590,7 @@
             // lblNavOptionsPlanetary
             // 
             this.lblNavOptionsPlanetary.AutoSize = true;
-            this.lblNavOptionsPlanetary.Location = new System.Drawing.Point(218, 87);
+            this.lblNavOptionsPlanetary.Location = new System.Drawing.Point(222, 87);
             this.lblNavOptionsPlanetary.Name = "lblNavOptionsPlanetary";
             this.lblNavOptionsPlanetary.Size = new System.Drawing.Size(54, 13);
             this.lblNavOptionsPlanetary.TabIndex = 80;
@@ -2600,7 +2613,7 @@
             // 
             this.numNavOptionsLy.ContextMenuStrip = this.mnuSetValues;
             this.numNavOptionsLy.DecimalPlaces = 2;
-            this.numNavOptionsLy.Location = new System.Drawing.Point(144, 82);
+            this.numNavOptionsLy.Location = new System.Drawing.Point(142, 84);
             this.numNavOptionsLy.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -2625,7 +2638,7 @@
             // lblNavOptionsLy
             // 
             this.lblNavOptionsLy.AutoSize = true;
-            this.lblNavOptionsLy.Location = new System.Drawing.Point(115, 84);
+            this.lblNavOptionsLy.Location = new System.Drawing.Point(113, 87);
             this.lblNavOptionsLy.Name = "lblNavOptionsLy";
             this.lblNavOptionsLy.Size = new System.Drawing.Size(23, 13);
             this.lblNavOptionsLy.TabIndex = 83;
@@ -2689,7 +2702,7 @@
             // 
             this.chkOldDataOptionsRoute.AutoSize = true;
             this.chkOldDataOptionsRoute.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkOldDataOptionsRoute.Location = new System.Drawing.Point(156, 88);
+            this.chkOldDataOptionsRoute.Location = new System.Drawing.Point(211, 87);
             this.chkOldDataOptionsRoute.Name = "chkOldDataOptionsRoute";
             this.chkOldDataOptionsRoute.Size = new System.Drawing.Size(97, 17);
             this.chkOldDataOptionsRoute.TabIndex = 5;
@@ -2774,7 +2787,7 @@
             // lblLocalOptionsPads
             // 
             this.lblLocalOptionsPads.AutoSize = true;
-            this.lblLocalOptionsPads.Location = new System.Drawing.Point(240, 60);
+            this.lblLocalOptionsPads.Location = new System.Drawing.Point(241, 86);
             this.lblLocalOptionsPads.Name = "lblLocalOptionsPads";
             this.lblLocalOptionsPads.Size = new System.Drawing.Size(34, 13);
             this.lblLocalOptionsPads.TabIndex = 100;
@@ -2784,7 +2797,7 @@
             // txtLocalOptionsPads
             // 
             this.txtLocalOptionsPads.ContextMenuStrip = this.mnuSetValues;
-            this.txtLocalOptionsPads.Location = new System.Drawing.Point(280, 57);
+            this.txtLocalOptionsPads.Location = new System.Drawing.Point(280, 84);
             this.txtLocalOptionsPads.MaxLength = 3;
             this.txtLocalOptionsPads.Name = "txtLocalOptionsPads";
             this.txtLocalOptionsPads.Size = new System.Drawing.Size(32, 20);
@@ -2818,7 +2831,7 @@
             // btnLocalOptionsReset
             // 
             this.btnLocalOptionsReset.Enabled = false;
-            this.btnLocalOptionsReset.Location = new System.Drawing.Point(291, 88);
+            this.btnLocalOptionsReset.Location = new System.Drawing.Point(30, 129);
             this.btnLocalOptionsReset.Name = "btnLocalOptionsReset";
             this.btnLocalOptionsReset.Size = new System.Drawing.Size(21, 21);
             this.btnLocalOptionsReset.TabIndex = 95;
@@ -2932,7 +2945,7 @@
             // 
             // btnLocalOptionsAll
             // 
-            this.btnLocalOptionsAll.Location = new System.Drawing.Point(264, 88);
+            this.btnLocalOptionsAll.Location = new System.Drawing.Point(3, 129);
             this.btnLocalOptionsAll.Name = "btnLocalOptionsAll";
             this.btnLocalOptionsAll.Size = new System.Drawing.Size(21, 21);
             this.btnLocalOptionsAll.TabIndex = 104;
@@ -2974,6 +2987,7 @@
             this.hdrCost});
             this.lvShipVendorOptionsShips.FullRowSelect = true;
             this.lvShipVendorOptionsShips.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvShipVendorOptionsShips.HideSelection = false;
             this.lvShipVendorOptionsShips.Location = new System.Drawing.Point(0, 2);
             this.lvShipVendorOptionsShips.Name = "lvShipVendorOptionsShips";
             this.lvShipVendorOptionsShips.Size = new System.Drawing.Size(317, 190);
@@ -3107,7 +3121,7 @@
             // lblOldDataOptionsPlanetary
             // 
             this.lblOldDataOptionsPlanetary.AutoSize = true;
-            this.lblOldDataOptionsPlanetary.Location = new System.Drawing.Point(160, 14);
+            this.lblOldDataOptionsPlanetary.Location = new System.Drawing.Point(213, 12);
             this.lblOldDataOptionsPlanetary.Name = "lblOldDataOptionsPlanetary";
             this.lblOldDataOptionsPlanetary.Size = new System.Drawing.Size(54, 13);
             this.lblOldDataOptionsPlanetary.TabIndex = 79;
@@ -3117,7 +3131,7 @@
             // txtOldDataOptionsPlanetary
             // 
             this.txtOldDataOptionsPlanetary.ContextMenuStrip = this.mnuSetValues;
-            this.txtOldDataOptionsPlanetary.Location = new System.Drawing.Point(218, 10);
+            this.txtOldDataOptionsPlanetary.Location = new System.Drawing.Point(273, 9);
             this.txtOldDataOptionsPlanetary.MaxLength = 3;
             this.txtOldDataOptionsPlanetary.Name = "txtOldDataOptionsPlanetary";
             this.txtOldDataOptionsPlanetary.Size = new System.Drawing.Size(35, 20);
@@ -3126,45 +3140,10 @@
             this.tipToolTips.SetToolTip(this.txtOldDataOptionsPlanetary, "Tooltip-056");
             this.txtOldDataOptionsPlanetary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_Planetary_KeyPress);
             // 
-            // cboCommandersShips
-            // 
-            this.cboCommandersShips.AutoAdjustItemHeight = false;
-            this.cboCommandersShips.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cboCommandersShips.DropDownHeight = 400;
-            this.cboCommandersShips.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCommandersShips.FormattingEnabled = true;
-            this.cboCommandersShips.IntegralHeight = false;
-            this.cboCommandersShips.Location = new System.Drawing.Point(6, 4);
-            this.cboCommandersShips.Name = "cboCommandersShips";
-            this.cboCommandersShips.SeparatorColor = System.Drawing.Color.RoyalBlue;
-            this.cboCommandersShips.SeparatorMargin = 1;
-            this.cboCommandersShips.SeparatorStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.cboCommandersShips.SeparatorWidth = 2;
-            this.cboCommandersShips.Size = new System.Drawing.Size(272, 21);
-            this.cboCommandersShips.TabIndex = 1;
-            this.cboCommandersShips.TabStop = false;
-            this.tipToolTips.SetToolTip(this.cboCommandersShips, "Tooltip-077");
-            this.cboCommandersShips.SelectionChangeCommitted += new System.EventHandler(this.EventHandler_Ships_SelectionChangeCommitted);
-            // 
-            // cboBuyOptionsCommodities
-            // 
-            this.cboBuyOptionsCommodities.CheckOnClick = true;
-            this.cboBuyOptionsCommodities.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cboBuyOptionsCommodities.DropDownHeight = 1;
-            this.cboBuyOptionsCommodities.FormattingEnabled = true;
-            this.cboBuyOptionsCommodities.IntegralHeight = false;
-            this.cboBuyOptionsCommodities.Location = new System.Drawing.Point(72, 31);
-            this.cboBuyOptionsCommodities.MaxDropDownItems = 50;
-            this.cboBuyOptionsCommodities.Name = "cboBuyOptionsCommodities";
-            this.cboBuyOptionsCommodities.Size = new System.Drawing.Size(240, 21);
-            this.cboBuyOptionsCommodities.TabIndex = 68;
-            this.tipToolTips.SetToolTip(this.cboBuyOptionsCommodities, "Tooltip-011");
-            this.cboBuyOptionsCommodities.ValueSeparator = ", ";
-            // 
             // lblOldDataOptionsPads
             // 
             this.lblOldDataOptionsPads.AutoSize = true;
-            this.lblOldDataOptionsPads.Location = new System.Drawing.Point(178, 36);
+            this.lblOldDataOptionsPads.Location = new System.Drawing.Point(233, 64);
             this.lblOldDataOptionsPads.Name = "lblOldDataOptionsPads";
             this.lblOldDataOptionsPads.Size = new System.Drawing.Size(34, 13);
             this.lblOldDataOptionsPads.TabIndex = 81;
@@ -3173,7 +3152,7 @@
             // 
             // txtOldDataOptionsPads
             // 
-            this.txtOldDataOptionsPads.Location = new System.Drawing.Point(218, 34);
+            this.txtOldDataOptionsPads.Location = new System.Drawing.Point(273, 61);
             this.txtOldDataOptionsPads.MaxLength = 3;
             this.txtOldDataOptionsPads.Name = "txtOldDataOptionsPads";
             this.txtOldDataOptionsPads.Size = new System.Drawing.Size(35, 20);
@@ -3181,6 +3160,160 @@
             this.txtOldDataOptionsPads.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tipToolTips.SetToolTip(this.txtOldDataOptionsPads, "Tooltip-055");
             this.txtOldDataOptionsPads.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_PadSize_KeyPress);
+            // 
+            // lblRunOptionsFleetCarriers
+            // 
+            this.lblRunOptionsFleetCarriers.AutoSize = true;
+            this.lblRunOptionsFleetCarriers.Location = new System.Drawing.Point(191, 138);
+            this.lblRunOptionsFleetCarriers.Name = "lblRunOptionsFleetCarriers";
+            this.lblRunOptionsFleetCarriers.Size = new System.Drawing.Size(71, 13);
+            this.lblRunOptionsFleetCarriers.TabIndex = 73;
+            this.lblRunOptionsFleetCarriers.Text = "Fleet Carriers:";
+            this.tipToolTips.SetToolTip(this.lblRunOptionsFleetCarriers, "Tooltip-100");
+            // 
+            // txtRunOptionsFleetCarriers
+            // 
+            this.txtRunOptionsFleetCarriers.ContextMenuStrip = this.mnuSetValues;
+            this.txtRunOptionsFleetCarriers.Location = new System.Drawing.Point(268, 135);
+            this.txtRunOptionsFleetCarriers.MaxLength = 3;
+            this.txtRunOptionsFleetCarriers.Name = "txtRunOptionsFleetCarriers";
+            this.txtRunOptionsFleetCarriers.Size = new System.Drawing.Size(32, 20);
+            this.txtRunOptionsFleetCarriers.TabIndex = 72;
+            this.txtRunOptionsFleetCarriers.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tipToolTips.SetToolTip(this.txtRunOptionsFleetCarriers, "Tooltip-100");
+            this.txtRunOptionsFleetCarriers.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_FleetCarriers_KeyPress);
+            // 
+            // lblLocalOptionsFleetCarriers
+            // 
+            this.lblLocalOptionsFleetCarriers.AutoSize = true;
+            this.lblLocalOptionsFleetCarriers.Location = new System.Drawing.Point(205, 60);
+            this.lblLocalOptionsFleetCarriers.Name = "lblLocalOptionsFleetCarriers";
+            this.lblLocalOptionsFleetCarriers.Size = new System.Drawing.Size(71, 13);
+            this.lblLocalOptionsFleetCarriers.TabIndex = 106;
+            this.lblLocalOptionsFleetCarriers.Text = "Fleet Carriers:";
+            this.tipToolTips.SetToolTip(this.lblLocalOptionsFleetCarriers, "Tooltip-100");
+            // 
+            // txtLocalOptionsFleetCarriers
+            // 
+            this.txtLocalOptionsFleetCarriers.ContextMenuStrip = this.mnuSetValues;
+            this.txtLocalOptionsFleetCarriers.Location = new System.Drawing.Point(280, 58);
+            this.txtLocalOptionsFleetCarriers.MaxLength = 3;
+            this.txtLocalOptionsFleetCarriers.Name = "txtLocalOptionsFleetCarriers";
+            this.txtLocalOptionsFleetCarriers.Size = new System.Drawing.Size(32, 20);
+            this.txtLocalOptionsFleetCarriers.TabIndex = 105;
+            this.txtLocalOptionsFleetCarriers.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tipToolTips.SetToolTip(this.txtLocalOptionsFleetCarriers, "Tooltip-100");
+            this.txtLocalOptionsFleetCarriers.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_FleetCarriers_KeyPress);
+            // 
+            // lblRaresOptionsFleetCarriers
+            // 
+            this.lblRaresOptionsFleetCarriers.AutoSize = true;
+            this.lblRaresOptionsFleetCarriers.Location = new System.Drawing.Point(205, 85);
+            this.lblRaresOptionsFleetCarriers.Name = "lblRaresOptionsFleetCarriers";
+            this.lblRaresOptionsFleetCarriers.Size = new System.Drawing.Size(71, 13);
+            this.lblRaresOptionsFleetCarriers.TabIndex = 89;
+            this.lblRaresOptionsFleetCarriers.Text = "Fleet Carriers:";
+            this.tipToolTips.SetToolTip(this.lblRaresOptionsFleetCarriers, "Tooltip-100");
+            // 
+            // txtRaresOptionsFleetCarriers
+            // 
+            this.txtRaresOptionsFleetCarriers.ContextMenuStrip = this.mnuSetValues;
+            this.txtRaresOptionsFleetCarriers.Location = new System.Drawing.Point(282, 82);
+            this.txtRaresOptionsFleetCarriers.MaxLength = 3;
+            this.txtRaresOptionsFleetCarriers.Name = "txtRaresOptionsFleetCarriers";
+            this.txtRaresOptionsFleetCarriers.Size = new System.Drawing.Size(32, 20);
+            this.txtRaresOptionsFleetCarriers.TabIndex = 88;
+            this.txtRaresOptionsFleetCarriers.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tipToolTips.SetToolTip(this.txtRaresOptionsFleetCarriers, "Tooltip-100");
+            this.txtRaresOptionsFleetCarriers.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_FleetCarriers_KeyPress);
+            // 
+            // lblSellOptionsFleetCarriers
+            // 
+            this.lblSellOptionsFleetCarriers.AutoSize = true;
+            this.lblSellOptionsFleetCarriers.Location = new System.Drawing.Point(115, 139);
+            this.lblSellOptionsFleetCarriers.Name = "lblSellOptionsFleetCarriers";
+            this.lblSellOptionsFleetCarriers.Size = new System.Drawing.Size(71, 13);
+            this.lblSellOptionsFleetCarriers.TabIndex = 90;
+            this.lblSellOptionsFleetCarriers.Text = "Fleet Carriers:";
+            this.tipToolTips.SetToolTip(this.lblSellOptionsFleetCarriers, "Tooltip-100");
+            // 
+            // txtSellOptionsFleetCarriers
+            // 
+            this.txtSellOptionsFleetCarriers.ContextMenuStrip = this.mnuSetValues;
+            this.txtSellOptionsFleetCarriers.Location = new System.Drawing.Point(192, 135);
+            this.txtSellOptionsFleetCarriers.MaxLength = 3;
+            this.txtSellOptionsFleetCarriers.Name = "txtSellOptionsFleetCarriers";
+            this.txtSellOptionsFleetCarriers.Size = new System.Drawing.Size(32, 20);
+            this.txtSellOptionsFleetCarriers.TabIndex = 89;
+            this.txtSellOptionsFleetCarriers.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tipToolTips.SetToolTip(this.txtSellOptionsFleetCarriers, "Tooltip-100");
+            this.txtSellOptionsFleetCarriers.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_FleetCarriers_KeyPress);
+            // 
+            // lblBuyOptionsFleetCarriers
+            // 
+            this.lblBuyOptionsFleetCarriers.AutoSize = true;
+            this.lblBuyOptionsFleetCarriers.Location = new System.Drawing.Point(113, 141);
+            this.lblBuyOptionsFleetCarriers.Name = "lblBuyOptionsFleetCarriers";
+            this.lblBuyOptionsFleetCarriers.Size = new System.Drawing.Size(71, 13);
+            this.lblBuyOptionsFleetCarriers.TabIndex = 88;
+            this.lblBuyOptionsFleetCarriers.Text = "Fleet Carriers:";
+            this.tipToolTips.SetToolTip(this.lblBuyOptionsFleetCarriers, "Tooltip-100");
+            // 
+            // txtBuyOptionsFleetCarriers
+            // 
+            this.txtBuyOptionsFleetCarriers.ContextMenuStrip = this.mnuSetValues;
+            this.txtBuyOptionsFleetCarriers.Location = new System.Drawing.Point(190, 137);
+            this.txtBuyOptionsFleetCarriers.MaxLength = 3;
+            this.txtBuyOptionsFleetCarriers.Name = "txtBuyOptionsFleetCarriers";
+            this.txtBuyOptionsFleetCarriers.Size = new System.Drawing.Size(32, 20);
+            this.txtBuyOptionsFleetCarriers.TabIndex = 87;
+            this.txtBuyOptionsFleetCarriers.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tipToolTips.SetToolTip(this.txtBuyOptionsFleetCarriers, "Tooltip-100");
+            this.txtBuyOptionsFleetCarriers.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_FleetCarriers_KeyPress);
+            // 
+            // lblNavOptionsFleetCarriers
+            // 
+            this.lblNavOptionsFleetCarriers.AutoSize = true;
+            this.lblNavOptionsFleetCarriers.Location = new System.Drawing.Point(204, 115);
+            this.lblNavOptionsFleetCarriers.Name = "lblNavOptionsFleetCarriers";
+            this.lblNavOptionsFleetCarriers.Size = new System.Drawing.Size(71, 13);
+            this.lblNavOptionsFleetCarriers.TabIndex = 86;
+            this.lblNavOptionsFleetCarriers.Text = "Fleet Carriers:";
+            this.tipToolTips.SetToolTip(this.lblNavOptionsFleetCarriers, "Tooltip-100");
+            // 
+            // txtNavOptionsFleetCarriers
+            // 
+            this.txtNavOptionsFleetCarriers.ContextMenuStrip = this.mnuSetValues;
+            this.txtNavOptionsFleetCarriers.Location = new System.Drawing.Point(281, 112);
+            this.txtNavOptionsFleetCarriers.MaxLength = 3;
+            this.txtNavOptionsFleetCarriers.Name = "txtNavOptionsFleetCarriers";
+            this.txtNavOptionsFleetCarriers.Size = new System.Drawing.Size(32, 20);
+            this.txtNavOptionsFleetCarriers.TabIndex = 85;
+            this.txtNavOptionsFleetCarriers.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tipToolTips.SetToolTip(this.txtNavOptionsFleetCarriers, "Tooltip-100");
+            this.txtNavOptionsFleetCarriers.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_FleetCarriers_KeyPress);
+            // 
+            // lblOldDataOptionsFleetCarriers
+            // 
+            this.lblOldDataOptionsFleetCarriers.AutoSize = true;
+            this.lblOldDataOptionsFleetCarriers.Location = new System.Drawing.Point(196, 38);
+            this.lblOldDataOptionsFleetCarriers.Name = "lblOldDataOptionsFleetCarriers";
+            this.lblOldDataOptionsFleetCarriers.Size = new System.Drawing.Size(71, 13);
+            this.lblOldDataOptionsFleetCarriers.TabIndex = 83;
+            this.lblOldDataOptionsFleetCarriers.Text = "Fleet Carriers:";
+            this.tipToolTips.SetToolTip(this.lblOldDataOptionsFleetCarriers, "Tooltip-100");
+            // 
+            // txtOldDataOptionsFleetCarriers
+            // 
+            this.txtOldDataOptionsFleetCarriers.ContextMenuStrip = this.mnuSetValues;
+            this.txtOldDataOptionsFleetCarriers.Location = new System.Drawing.Point(273, 35);
+            this.txtOldDataOptionsFleetCarriers.MaxLength = 3;
+            this.txtOldDataOptionsFleetCarriers.Name = "txtOldDataOptionsFleetCarriers";
+            this.txtOldDataOptionsFleetCarriers.Size = new System.Drawing.Size(35, 20);
+            this.txtOldDataOptionsFleetCarriers.TabIndex = 82;
+            this.txtOldDataOptionsFleetCarriers.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tipToolTips.SetToolTip(this.txtOldDataOptionsFleetCarriers, "Tooltip-100");
+            this.txtOldDataOptionsFleetCarriers.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_FleetCarriers_KeyPress);
             // 
             // backgroundWorker3
             // 
@@ -3194,6 +3327,8 @@
             // 
             // panRunOptions
             // 
+            this.panRunOptions.Controls.Add(this.lblRunOptionsFleetCarriers);
+            this.panRunOptions.Controls.Add(this.txtRunOptionsFleetCarriers);
             this.panRunOptions.Controls.Add(this.chkIncludeInsurance);
             this.panRunOptions.Controls.Add(this.btnRunOptionsSwap);
             this.panRunOptions.Controls.Add(this.lblRunOptionsLoopInt);
@@ -3481,6 +3616,8 @@
             // 
             // panSellOptions
             // 
+            this.panSellOptions.Controls.Add(this.lblSellOptionsFleetCarriers);
+            this.panSellOptions.Controls.Add(this.txtSellOptionsFleetCarriers);
             this.panSellOptions.Controls.Add(this.cboSellOptionsCommodities);
             this.panSellOptions.Controls.Add(this.chkSellOptionsBlkMkt);
             this.panSellOptions.Controls.Add(this.grpSellOptionsSort);
@@ -3513,7 +3650,7 @@
             this.grpSellOptionsSort.Controls.Add(this.lblSellOptionsSort);
             this.grpSellOptionsSort.Controls.Add(this.optSellOptionsSupply);
             this.grpSellOptionsSort.Controls.Add(this.optSellOptionsPrice);
-            this.grpSellOptionsSort.Location = new System.Drawing.Point(4, 130);
+            this.grpSellOptionsSort.Location = new System.Drawing.Point(4, 160);
             this.grpSellOptionsSort.Name = "grpSellOptionsSort";
             this.grpSellOptionsSort.Size = new System.Drawing.Size(310, 26);
             this.grpSellOptionsSort.TabIndex = 86;
@@ -3521,6 +3658,8 @@
             // 
             // panBuyOptions
             // 
+            this.panBuyOptions.Controls.Add(this.lblBuyOptionsFleetCarriers);
+            this.panBuyOptions.Controls.Add(this.txtBuyOptionsFleetCarriers);
             this.panBuyOptions.Controls.Add(this.grpBuyOptionsSort);
             this.panBuyOptions.Controls.Add(this.lblBuyOptionsCommodity);
             this.panBuyOptions.Controls.Add(this.cboBuyOptionsCommodities);
@@ -3556,7 +3695,7 @@
             this.grpBuyOptionsSort.Controls.Add(this.optBuyOptionsSupply);
             this.grpBuyOptionsSort.Controls.Add(this.optBuyOptionsDistance);
             this.grpBuyOptionsSort.Controls.Add(this.optBuyOptionsPrice);
-            this.grpBuyOptionsSort.Location = new System.Drawing.Point(4, 130);
+            this.grpBuyOptionsSort.Location = new System.Drawing.Point(4, 162);
             this.grpBuyOptionsSort.Name = "grpBuyOptionsSort";
             this.grpBuyOptionsSort.Size = new System.Drawing.Size(310, 26);
             this.grpBuyOptionsSort.TabIndex = 86;
@@ -3750,6 +3889,8 @@
             // 
             // panRaresOptions
             // 
+            this.panRaresOptions.Controls.Add(this.lblRaresOptionsFleetCarriers);
+            this.panRaresOptions.Controls.Add(this.txtRaresOptionsFleetCarriers);
             this.panRaresOptions.Controls.Add(this.grpRaresOptionsType);
             this.panRaresOptions.Controls.Add(this.grpRaresOptionsSort);
             this.panRaresOptions.Controls.Add(this.lblRaresOptionsPads);
@@ -3779,7 +3920,7 @@
             this.grpRaresOptionsType.Controls.Add(this.lblRaresOptionsType);
             this.grpRaresOptionsType.Controls.Add(this.optRaresOptionsLegal);
             this.grpRaresOptionsType.Controls.Add(this.optRaresOptionsIllegal);
-            this.grpRaresOptionsType.Location = new System.Drawing.Point(7, 81);
+            this.grpRaresOptionsType.Location = new System.Drawing.Point(7, 116);
             this.grpRaresOptionsType.Name = "grpRaresOptionsType";
             this.grpRaresOptionsType.Size = new System.Drawing.Size(310, 26);
             this.grpRaresOptionsType.TabIndex = 87;
@@ -3790,7 +3931,7 @@
             this.grpRaresOptionsSort.Controls.Add(this.lblRaresOptionsSort);
             this.grpRaresOptionsSort.Controls.Add(this.optRaresOptionsDistance);
             this.grpRaresOptionsSort.Controls.Add(this.optRaresOptionsPrice);
-            this.grpRaresOptionsSort.Location = new System.Drawing.Point(7, 113);
+            this.grpRaresOptionsSort.Location = new System.Drawing.Point(7, 148);
             this.grpRaresOptionsSort.Name = "grpRaresOptionsSort";
             this.grpRaresOptionsSort.Size = new System.Drawing.Size(310, 26);
             this.grpRaresOptionsSort.TabIndex = 86;
@@ -3834,7 +3975,6 @@
             // 
             // panShipVendorOptions
             // 
-            this.panShipVendorOptions.Controls.Add(this.lvShipVendorOptionsShips);
             this.panShipVendorOptions.Location = new System.Drawing.Point(1, 1);
             this.panShipVendorOptions.Name = "panShipVendorOptions";
             this.panShipVendorOptions.Size = new System.Drawing.Size(320, 195);
@@ -3845,6 +3985,9 @@
             // 
             // panNavOptions
             // 
+            this.panNavOptions.Controls.Add(this.lvShipVendorOptionsShips);
+            this.panNavOptions.Controls.Add(this.lblNavOptionsFleetCarriers);
+            this.panNavOptions.Controls.Add(this.txtNavOptionsFleetCarriers);
             this.panNavOptions.Controls.Add(this.numNavOptionsLy);
             this.panNavOptions.Controls.Add(this.lblNavOptionsLy);
             this.panNavOptions.Controls.Add(this.lblNavOptionsPads);
@@ -3871,6 +4014,8 @@
             // 
             // panOldDataOptions
             // 
+            this.panOldDataOptions.Controls.Add(this.lblOldDataOptionsFleetCarriers);
+            this.panOldDataOptions.Controls.Add(this.txtOldDataOptionsFleetCarriers);
             this.panOldDataOptions.Controls.Add(this.lblOldDataOptionsPads);
             this.panOldDataOptions.Controls.Add(this.txtOldDataOptionsPads);
             this.panOldDataOptions.Controls.Add(this.lblOldDataOptionsPlanetary);
@@ -3884,7 +4029,7 @@
             this.panOldDataOptions.Controls.Add(this.lblOldDataOptionsLimit);
             this.panOldDataOptions.Controls.Add(this.numOldDataOptionsLimit);
             this.panOldDataOptions.Controls.Add(this.lblOldDataOptionsNearLy);
-            this.panOldDataOptions.Location = new System.Drawing.Point(1, 1);
+            this.panOldDataOptions.Location = new System.Drawing.Point(1, 0);
             this.panOldDataOptions.Name = "panOldDataOptions";
             this.panOldDataOptions.Size = new System.Drawing.Size(320, 195);
             this.panOldDataOptions.TabIndex = 6;
@@ -3894,6 +4039,8 @@
             // 
             // panLocalOptions
             // 
+            this.panLocalOptions.Controls.Add(this.lblLocalOptionsFleetCarriers);
+            this.panLocalOptions.Controls.Add(this.txtLocalOptionsFleetCarriers);
             this.panLocalOptions.Controls.Add(this.btnLocalOptionsAll);
             this.panLocalOptions.Controls.Add(this.chkLocalOptionsTrading);
             this.panLocalOptions.Controls.Add(this.numLocalOptionsLy);
@@ -3922,20 +4069,55 @@
             // panOptions
             // 
             this.panOptions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panOptions.Controls.Add(this.panOldDataOptions);
+            this.panOptions.Controls.Add(this.panNavOptions);
+            this.panOptions.Controls.Add(this.panLocalOptions);
+            this.panOptions.Controls.Add(this.panShipVendorOptions);
             this.panOptions.Controls.Add(this.panRunOptions);
             this.panOptions.Controls.Add(this.panMarketOptions);
+            this.panOptions.Controls.Add(this.panOldDataOptions);
             this.panOptions.Controls.Add(this.panRaresOptions);
             this.panOptions.Controls.Add(this.panSellOptions);
             this.panOptions.Controls.Add(this.panBuyOptions);
             this.panOptions.Controls.Add(this.panTradeOptions);
-            this.panOptions.Controls.Add(this.panNavOptions);
-            this.panOptions.Controls.Add(this.panLocalOptions);
-            this.panOptions.Controls.Add(this.panShipVendorOptions);
             this.panOptions.Location = new System.Drawing.Point(10, 33);
             this.panOptions.Name = "panOptions";
             this.panOptions.Size = new System.Drawing.Size(322, 197);
             this.panOptions.TabIndex = 1;
+            // 
+            // cboCommandersShips
+            // 
+            this.cboCommandersShips.AutoAdjustItemHeight = false;
+            this.cboCommandersShips.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cboCommandersShips.DropDownHeight = 400;
+            this.cboCommandersShips.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCommandersShips.FormattingEnabled = true;
+            this.cboCommandersShips.IntegralHeight = false;
+            this.cboCommandersShips.Location = new System.Drawing.Point(6, 4);
+            this.cboCommandersShips.Name = "cboCommandersShips";
+            this.cboCommandersShips.SeparatorColor = System.Drawing.Color.RoyalBlue;
+            this.cboCommandersShips.SeparatorMargin = 1;
+            this.cboCommandersShips.SeparatorStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.cboCommandersShips.SeparatorWidth = 2;
+            this.cboCommandersShips.Size = new System.Drawing.Size(272, 21);
+            this.cboCommandersShips.TabIndex = 1;
+            this.cboCommandersShips.TabStop = false;
+            this.tipToolTips.SetToolTip(this.cboCommandersShips, "Tooltip-077");
+            this.cboCommandersShips.SelectionChangeCommitted += new System.EventHandler(this.EventHandler_Ships_SelectionChangeCommitted);
+            // 
+            // cboBuyOptionsCommodities
+            // 
+            this.cboBuyOptionsCommodities.CheckOnClick = true;
+            this.cboBuyOptionsCommodities.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cboBuyOptionsCommodities.DropDownHeight = 1;
+            this.cboBuyOptionsCommodities.FormattingEnabled = true;
+            this.cboBuyOptionsCommodities.IntegralHeight = false;
+            this.cboBuyOptionsCommodities.Location = new System.Drawing.Point(72, 31);
+            this.cboBuyOptionsCommodities.MaxDropDownItems = 50;
+            this.cboBuyOptionsCommodities.Name = "cboBuyOptionsCommodities";
+            this.cboBuyOptionsCommodities.Size = new System.Drawing.Size(240, 21);
+            this.cboBuyOptionsCommodities.TabIndex = 68;
+            this.tipToolTips.SetToolTip(this.cboBuyOptionsCommodities, "Tooltip-011");
+            this.cboBuyOptionsCommodities.ValueSeparator = ", ";
             // 
             // MainForm
             // 
@@ -4053,7 +4235,6 @@
             this.panMarketOptions.ResumeLayout(false);
             this.grpMarketOptionsType.ResumeLayout(false);
             this.grpMarketOptionsType.PerformLayout();
-            this.panShipVendorOptions.ResumeLayout(false);
             this.panNavOptions.ResumeLayout(false);
             this.panNavOptions.PerformLayout();
             this.panOldDataOptions.ResumeLayout(false);
@@ -4355,6 +4536,20 @@
         private System.Windows.Forms.Label lblOldDataOptionsMaxLSDistance;
         private System.Windows.Forms.Label lblOldDataOptionsPads;
         private System.Windows.Forms.TextBox txtOldDataOptionsPads;
+        private System.Windows.Forms.Label lblRunOptionsFleetCarriers;
+        private System.Windows.Forms.TextBox txtRunOptionsFleetCarriers;
+        private System.Windows.Forms.Label lblLocalOptionsFleetCarriers;
+        private System.Windows.Forms.TextBox txtLocalOptionsFleetCarriers;
+        private System.Windows.Forms.Label lblRaresOptionsFleetCarriers;
+        private System.Windows.Forms.TextBox txtRaresOptionsFleetCarriers;
+        private System.Windows.Forms.Label lblSellOptionsFleetCarriers;
+        private System.Windows.Forms.TextBox txtSellOptionsFleetCarriers;
+        private System.Windows.Forms.Label lblBuyOptionsFleetCarriers;
+        private System.Windows.Forms.TextBox txtBuyOptionsFleetCarriers;
+        private System.Windows.Forms.Label lblNavOptionsFleetCarriers;
+        private System.Windows.Forms.TextBox txtNavOptionsFleetCarriers;
+        private System.Windows.Forms.Label lblOldDataOptionsFleetCarriers;
+        private System.Windows.Forms.TextBox txtOldDataOptionsFleetCarriers;
     }
 }
 

@@ -25,6 +25,7 @@ namespace TDHelper
         public const string ITEM_CSV_FILE = @"data\Item.csv";
         public const string PAD_SIZE_FILTER = "SML?";
         public const string PLANETARY_FILTER = "YN?";
+        public const string FLEET_CARRIERS_FILTER = "YN?";
         public const string SHIP_CSV_FILE = @"data\Ship.csv";
 
         #region Props
@@ -690,6 +691,7 @@ namespace TDHelper
 
             settingsRef.Padsizes = ContainsPadSizes(settingsRef.Padsizes);
             settingsRef.Planetary = ContainsPlanetary(settingsRef.Planetary);
+            settingsRef.FleetCarriers = ContainsFleetCarriers(settingsRef.FleetCarriers);
 
             // an exception is made for checkboxes, we shouldn't ever get here
             if (settingsRef.Towards && settingsRef.Loop)
