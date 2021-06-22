@@ -487,7 +487,7 @@ namespace TDHelper
 
                 StackCircularBuffer("Analysing database...{0}".With(Environment.NewLine));
 
-                VacuumAllDatabases();
+                AnalyseAllDatabases();
 
                 StackCircularBuffer("Analysis completed.{0}".With(Environment.NewLine));
             }
@@ -527,7 +527,7 @@ namespace TDHelper
 
                 StackCircularBuffer("Vacuuming database...{0}".With(Environment.NewLine));
 
-                AnalyseAllDatabases();
+                VacuumAllDatabases();
 
                 StackCircularBuffer("Vacuum completed.{0}".With(Environment.NewLine));
             }
