@@ -491,7 +491,7 @@ namespace TDHelper
 
                 StackCircularBuffer("Analysis completed.{0}".With(Environment.NewLine));
             }
-            if (DBUpdateCommandString == "INDEX")
+            else if (DBUpdateCommandString == "INDEX")
             {
                 // only start the stopwatch for callers that run in the background
                 if (!backgroundWorker3.IsBusy)
