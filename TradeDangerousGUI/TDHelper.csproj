@@ -132,6 +132,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgeUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="AppSettings.cs" />
     <Compile Include="CheckedComboBox.cs">
       <SubType>Component</SubType>

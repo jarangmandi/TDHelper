@@ -106,7 +106,7 @@
             this.lblPadSize = new System.Windows.Forms.Label();
             this.txtPadSize = new System.Windows.Forms.TextBox();
             this.lblRouteOptionsAge = new System.Windows.Forms.Label();
-            this.numRouteOptionsAge = new System.Windows.Forms.NumericUpDown();
+            this.numRouteOptionsAge = new TDHelper.AgeUpDown();
             this.lblRouteOptionsGpt = new System.Windows.Forms.Label();
             this.cboSourceSystem = new System.Windows.Forms.ComboBox();
             this.lblRouteOptionsMargin = new System.Windows.Forms.Label();
@@ -1284,6 +1284,7 @@
             this.numRouteOptionsAge.TabIndex = 0;
             this.numRouteOptionsAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tipToolTips.SetToolTip(this.numRouteOptionsAge, "Tooltip-002");
+            this.numRouteOptionsAge.ValueChanged += new System.EventHandler(this.numRouteOptionsAge_ValueChanged);
             this.numRouteOptionsAge.Enter += new System.EventHandler(this.EventHandler_NumericUpDown_Enter);
             this.numRouteOptionsAge.MouseUp += new System.Windows.Forms.MouseEventHandler(this.EventHandler_NumericUpDown_MouseUp);
             // 
@@ -4302,7 +4303,7 @@
         private System.Windows.Forms.NumericUpDown numRouteOptionsPruneHops;
         private System.Windows.Forms.NumericUpDown numRouteOptionsPruneScore;
         private System.Windows.Forms.NumericUpDown numRouteOptionsLsPenalty;
-        private System.Windows.Forms.NumericUpDown numRouteOptionsAge;
+        private AgeUpDown numRouteOptionsAge;
         private System.Windows.Forms.NumericUpDown numRunOptionsRoutes;
         private System.Windows.Forms.NumericUpDown numRunOptionsEndJumps;
         private System.Windows.Forms.NumericUpDown numRunOptionsStartJumps;

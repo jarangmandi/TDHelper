@@ -4379,5 +4379,35 @@ namespace TDHelper
                 lblRunOptionsEndJumps.Enabled = false;
             }
         }
+
+        // The "Age" field should only show the required number of decimal places according to the value.
+        private void numRouteOptionsAge_ValueChanged(object sender, EventArgs e)
+        {
+            // Get the control which is sending the event.
+            NumericUpDown control = sender as NumericUpDown;
+
+            if (control != null)
+            {
+                // Turn the value into a string and work out where the decimal point is
+                string str = control.Value.ToString();
+                int dpIndex = str.IndexOf('.');
+                int dp = 0;
+
+                // If there isn't one
+                if (dpIndex < 0)
+                {
+                    // Then we don't need to show any decimal places
+                    dp = 0;
+                }
+                else
+                {
+                    // Otherwise calculate the number of decimal places to be displayed
+                    dp = str.Length - dpIndex - 1;
+                }
+
+                // Update the display field
+                control.DecimalPlaces = dp;
+            }
+        }
     }
 }
