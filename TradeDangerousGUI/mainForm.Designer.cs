@@ -273,6 +273,8 @@
             this.txtNavOptionsFleetCarriers = new System.Windows.Forms.TextBox();
             this.lblOldDataOptionsFleetCarriers = new System.Windows.Forms.Label();
             this.txtOldDataOptionsFleetCarriers = new System.Windows.Forms.TextBox();
+            this.cboCommandersShips = new SeparatorComboBox.SeparatorComboBox();
+            this.cboBuyOptionsCommodities = new TDHelper.CheckedComboBox();
             this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker4 = new System.ComponentModel.BackgroundWorker();
             this.panRunOptions = new System.Windows.Forms.Panel();
@@ -329,8 +331,6 @@
             this.panOldDataOptions = new System.Windows.Forms.Panel();
             this.panLocalOptions = new System.Windows.Forms.Panel();
             this.panOptions = new System.Windows.Forms.Panel();
-            this.cboCommandersShips = new SeparatorComboBox.SeparatorComboBox();
-            this.cboBuyOptionsCommodities = new TDHelper.CheckedComboBox();
             this.mnuSetValues.SuspendLayout();
             this.mnuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numRunOptionsRoutes)).BeginInit();
@@ -404,6 +404,7 @@
             this.panTradeOptions.SuspendLayout();
             this.panMarketOptions.SuspendLayout();
             this.grpMarketOptionsType.SuspendLayout();
+            this.panShipVendorOptions.SuspendLayout();
             this.panNavOptions.SuspendLayout();
             this.panOldDataOptions.SuspendLayout();
             this.panLocalOptions.SuspendLayout();
@@ -2989,7 +2990,7 @@
             this.lvShipVendorOptionsShips.FullRowSelect = true;
             this.lvShipVendorOptionsShips.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.lvShipVendorOptionsShips.HideSelection = false;
-            this.lvShipVendorOptionsShips.Location = new System.Drawing.Point(0, 2);
+            this.lvShipVendorOptionsShips.Location = new System.Drawing.Point(0, 0);
             this.lvShipVendorOptionsShips.Name = "lvShipVendorOptionsShips";
             this.lvShipVendorOptionsShips.Size = new System.Drawing.Size(317, 190);
             this.lvShipVendorOptionsShips.TabIndex = 15;
@@ -3315,6 +3316,41 @@
             this.txtOldDataOptionsFleetCarriers.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tipToolTips.SetToolTip(this.txtOldDataOptionsFleetCarriers, "Tooltip-100");
             this.txtOldDataOptionsFleetCarriers.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_FleetCarriers_KeyPress);
+            // 
+            // cboCommandersShips
+            // 
+            this.cboCommandersShips.AutoAdjustItemHeight = false;
+            this.cboCommandersShips.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cboCommandersShips.DropDownHeight = 400;
+            this.cboCommandersShips.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCommandersShips.FormattingEnabled = true;
+            this.cboCommandersShips.IntegralHeight = false;
+            this.cboCommandersShips.Location = new System.Drawing.Point(6, 4);
+            this.cboCommandersShips.Name = "cboCommandersShips";
+            this.cboCommandersShips.SeparatorColor = System.Drawing.Color.RoyalBlue;
+            this.cboCommandersShips.SeparatorMargin = 1;
+            this.cboCommandersShips.SeparatorStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.cboCommandersShips.SeparatorWidth = 2;
+            this.cboCommandersShips.Size = new System.Drawing.Size(272, 21);
+            this.cboCommandersShips.TabIndex = 1;
+            this.cboCommandersShips.TabStop = false;
+            this.tipToolTips.SetToolTip(this.cboCommandersShips, "Tooltip-077");
+            this.cboCommandersShips.SelectionChangeCommitted += new System.EventHandler(this.EventHandler_Ships_SelectionChangeCommitted);
+            // 
+            // cboBuyOptionsCommodities
+            // 
+            this.cboBuyOptionsCommodities.CheckOnClick = true;
+            this.cboBuyOptionsCommodities.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cboBuyOptionsCommodities.DropDownHeight = 1;
+            this.cboBuyOptionsCommodities.FormattingEnabled = true;
+            this.cboBuyOptionsCommodities.IntegralHeight = false;
+            this.cboBuyOptionsCommodities.Location = new System.Drawing.Point(72, 31);
+            this.cboBuyOptionsCommodities.MaxDropDownItems = 50;
+            this.cboBuyOptionsCommodities.Name = "cboBuyOptionsCommodities";
+            this.cboBuyOptionsCommodities.Size = new System.Drawing.Size(240, 21);
+            this.cboBuyOptionsCommodities.TabIndex = 68;
+            this.tipToolTips.SetToolTip(this.cboBuyOptionsCommodities, "Tooltip-011");
+            this.cboBuyOptionsCommodities.ValueSeparator = ", ";
             // 
             // backgroundWorker3
             // 
@@ -3976,6 +4012,7 @@
             // 
             // panShipVendorOptions
             // 
+            this.panShipVendorOptions.Controls.Add(this.lvShipVendorOptionsShips);
             this.panShipVendorOptions.Location = new System.Drawing.Point(1, 1);
             this.panShipVendorOptions.Name = "panShipVendorOptions";
             this.panShipVendorOptions.Size = new System.Drawing.Size(320, 195);
@@ -3986,7 +4023,6 @@
             // 
             // panNavOptions
             // 
-            this.panNavOptions.Controls.Add(this.lvShipVendorOptionsShips);
             this.panNavOptions.Controls.Add(this.lblNavOptionsFleetCarriers);
             this.panNavOptions.Controls.Add(this.txtNavOptionsFleetCarriers);
             this.panNavOptions.Controls.Add(this.numNavOptionsLy);
@@ -4070,8 +4106,6 @@
             // panOptions
             // 
             this.panOptions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panOptions.Controls.Add(this.panNavOptions);
-            this.panOptions.Controls.Add(this.panLocalOptions);
             this.panOptions.Controls.Add(this.panShipVendorOptions);
             this.panOptions.Controls.Add(this.panRunOptions);
             this.panOptions.Controls.Add(this.panMarketOptions);
@@ -4080,45 +4114,12 @@
             this.panOptions.Controls.Add(this.panSellOptions);
             this.panOptions.Controls.Add(this.panBuyOptions);
             this.panOptions.Controls.Add(this.panTradeOptions);
+            this.panOptions.Controls.Add(this.panNavOptions);
+            this.panOptions.Controls.Add(this.panLocalOptions);
             this.panOptions.Location = new System.Drawing.Point(10, 33);
             this.panOptions.Name = "panOptions";
             this.panOptions.Size = new System.Drawing.Size(322, 197);
             this.panOptions.TabIndex = 1;
-            // 
-            // cboCommandersShips
-            // 
-            this.cboCommandersShips.AutoAdjustItemHeight = false;
-            this.cboCommandersShips.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cboCommandersShips.DropDownHeight = 400;
-            this.cboCommandersShips.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCommandersShips.FormattingEnabled = true;
-            this.cboCommandersShips.IntegralHeight = false;
-            this.cboCommandersShips.Location = new System.Drawing.Point(6, 4);
-            this.cboCommandersShips.Name = "cboCommandersShips";
-            this.cboCommandersShips.SeparatorColor = System.Drawing.Color.RoyalBlue;
-            this.cboCommandersShips.SeparatorMargin = 1;
-            this.cboCommandersShips.SeparatorStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.cboCommandersShips.SeparatorWidth = 2;
-            this.cboCommandersShips.Size = new System.Drawing.Size(272, 21);
-            this.cboCommandersShips.TabIndex = 1;
-            this.cboCommandersShips.TabStop = false;
-            this.tipToolTips.SetToolTip(this.cboCommandersShips, "Tooltip-077");
-            this.cboCommandersShips.SelectionChangeCommitted += new System.EventHandler(this.EventHandler_Ships_SelectionChangeCommitted);
-            // 
-            // cboBuyOptionsCommodities
-            // 
-            this.cboBuyOptionsCommodities.CheckOnClick = true;
-            this.cboBuyOptionsCommodities.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cboBuyOptionsCommodities.DropDownHeight = 1;
-            this.cboBuyOptionsCommodities.FormattingEnabled = true;
-            this.cboBuyOptionsCommodities.IntegralHeight = false;
-            this.cboBuyOptionsCommodities.Location = new System.Drawing.Point(72, 31);
-            this.cboBuyOptionsCommodities.MaxDropDownItems = 50;
-            this.cboBuyOptionsCommodities.Name = "cboBuyOptionsCommodities";
-            this.cboBuyOptionsCommodities.Size = new System.Drawing.Size(240, 21);
-            this.cboBuyOptionsCommodities.TabIndex = 68;
-            this.tipToolTips.SetToolTip(this.cboBuyOptionsCommodities, "Tooltip-011");
-            this.cboBuyOptionsCommodities.ValueSeparator = ", ";
             // 
             // MainForm
             // 
@@ -4236,6 +4237,7 @@
             this.panMarketOptions.ResumeLayout(false);
             this.grpMarketOptionsType.ResumeLayout(false);
             this.grpMarketOptionsType.PerformLayout();
+            this.panShipVendorOptions.ResumeLayout(false);
             this.panNavOptions.ResumeLayout(false);
             this.panNavOptions.PerformLayout();
             this.panOldDataOptions.ResumeLayout(false);
