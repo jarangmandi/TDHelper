@@ -3,3 +3,4 @@ obj/
 .vs/
 edce-client/
 packages/
+/TradeDangerousGUI/TDHelper.csproj.user

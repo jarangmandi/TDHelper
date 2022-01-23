@@ -180,6 +180,11 @@ namespace TDHelper
             return AddTextOption(fleetCarrier, "fc");
         }
 
+        private string AddOdysseyOption(string odyssey)
+        {
+            return AddTextOption(odyssey, "od");
+        }
+
         /// <summary>
         /// Add the limit parameter if required.
         /// </summary>
@@ -932,6 +937,7 @@ namespace TDHelper
             txtPadSize.Text = ContainsPadSizes(settingsRef.Padsizes);
             txtRunOptionsPlanetary.Text = ContainsPlanetary(settingsRef.Planetary);
             txtRunOptionsFleetCarriers.Text = ContainsFleetCarriers(settingsRef.FleetCarriers);
+            txtRunOptionsOdyssey.Text = ContainsOdyssey(settingsRef.Odyssey);
 
             // exception for Loop
             if (settingsRef.Loop && settingsRef.Towards)
@@ -1002,6 +1008,7 @@ namespace TDHelper
             settingsRef.Padsizes = ContainsPadSizes(txtPadSize.Text);
             settingsRef.Planetary = ContainsPlanetary(txtRunOptionsPlanetary.Text);
             settingsRef.FleetCarriers = ContainsFleetCarriers(txtRunOptionsFleetCarriers.Text);
+            settingsRef.Odyssey = ContainsOdyssey(txtRunOptionsOdyssey.Text);
         }
 
         /// <summary>
@@ -2351,6 +2358,25 @@ namespace TDHelper
         }
 
         /// <summary>
+        /// Ensure that the fleet carrier options are Y, N, ? or a combination of these.
+        /// </summary>
+        /// <param name="sender">The text box.</param>
+        /// <param name="e">The current key press.</param>
+        private void EventHandler_Odyssey_KeyPress(
+            object sender,
+            KeyPressEventArgs e)
+        {
+            TextBox odyssey = ((TextBox)sender);
+
+            odyssey.Text = ContainsOdyssey(CheckKeyPress(
+                odyssey.Text,
+                e.KeyChar.ToString().ToUpper(),
+                ODYSSEY_FILTER));
+
+            e.Handled = true;
+        }
+
+        /// <summary>
         /// Event handler.
         /// </summary>
         /// <param name="sender">The sender object.</param>
@@ -3106,6 +3132,7 @@ namespace TDHelper
                 cmdPath += AddPadOption(txtBuyOptionsPads.Text);
                 cmdPath += AddPlanetaryOption(txtBuyOptionsPlanetary.Text);
                 cmdPath += AddFleetCarrierOption(txtBuyOptionsFleetCarriers.Text);
+                cmdPath += AddOdysseyOption(txtBuyOptionsOdyssey.Text);
                 cmdPath += AddLimitOption(numBuyOptionsLimit.Value);
 
                 cmdPath += AddAvoidOption(txtBuyOptionsAvoid.Text);
@@ -3178,6 +3205,7 @@ namespace TDHelper
 
                 cmdPath += AddPlanetaryOption(txtLocalOptionsPlanetary.Text);
                 cmdPath += AddFleetCarrierOption(txtLocalOptionsFleetCarriers.Text);
+                cmdPath += AddOdysseyOption(txtLocalOptionsOdyssey.Text);
                 cmdPath += AddPadOption(txtLocalOptionsPads.Text);
 
                 cmdPath += AddVerbosity();
@@ -3309,6 +3337,7 @@ namespace TDHelper
                 cmdPath += AddTextOption(txtNavOptionsAvoid.Text, "avoid");
                 cmdPath += AddPlanetaryOption(txtNavOptionsPlanetary.Text);
                 cmdPath += AddFleetCarrierOption(txtNavOptionsFleetCarriers.Text);
+                cmdPath += AddOdysseyOption(txtNavOptionsOdyssey.Text);
                 cmdPath += AddPadOption(txtNavOptionsPads.Text);
 
                 cmdPath += AddNumericOption(numNavOptionsLy.Value, "ly");
@@ -3342,6 +3371,7 @@ namespace TDHelper
             cmdPath += AddLimitOption(numOldDataOptionsLimit.Value, true);
             cmdPath += AddPlanetaryOption(txtOldDataOptionsPlanetary.Text);
             cmdPath += AddFleetCarrierOption(txtOldDataOptionsFleetCarriers.Text);
+            cmdPath += AddOdysseyOption(txtOldDataOptionsOdyssey.Text);
             cmdPath += AddNumericOption(numOldDataOptionsMaxLSDistance.Value, "ls-max");
             cmdPath += AddPadOption(txtOldDataOptionsPads.Text);
 
@@ -3369,6 +3399,7 @@ namespace TDHelper
                 cmdPath += AddPadOption(txtRaresOptionsPads.Text);
                 cmdPath += AddPlanetaryOption(txtRaresOptionsPlanetary.Text);
                 cmdPath += AddFleetCarrierOption(txtRaresOptionsFleetCarriers.Text);
+                cmdPath += AddOdysseyOption(txtRaresOptionsOdyssey.Text);
                 cmdPath += AddLimitOption(numRaresOptionsLimit.Value);
 
                 cmdPath += AddCheckedOption(chkRaresOptionsReverse.Checked, "reverse");
@@ -3478,6 +3509,7 @@ namespace TDHelper
 
             cmdPath += AddPlanetaryOption(txtRunOptionsPlanetary.Text);
             cmdPath += AddFleetCarrierOption(txtRunOptionsFleetCarriers.Text);
+            cmdPath += AddOdysseyOption(txtRunOptionsOdyssey.Text);
             cmdPath += AddPadOption(txtPadSize.Text);
 
             cmdPath += AddVerbosity();
@@ -3558,6 +3590,7 @@ namespace TDHelper
                 cmdPath += AddPadOption(txtSellOptionsPads.Text);
                 cmdPath += AddPlanetaryOption(txtSellOptionsPlanetary.Text);
                 cmdPath += AddFleetCarrierOption(txtSellOptionsFleetCarriers.Text);
+                cmdPath += AddOdysseyOption(txtSellOptionsOdyssey.Text);
                 cmdPath += AddLimitOption(numSellOptionsLimit.Value);
 
                 cmdPath += AddAvoidOption(txtSellOptionsAvoid.Text);

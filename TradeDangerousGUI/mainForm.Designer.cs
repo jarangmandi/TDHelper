@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.Windows.Forms.Label lblSellOptionsOdyssey;
             this.btnStart = new System.Windows.Forms.Button();
             this.lblRunOptionsDestination = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -275,9 +276,19 @@
             this.txtOldDataOptionsFleetCarriers = new System.Windows.Forms.TextBox();
             this.cboCommandersShips = new SeparatorComboBox.SeparatorComboBox();
             this.cboBuyOptionsCommodities = new TDHelper.CheckedComboBox();
+            this.lblRunOptionsOdyssey = new System.Windows.Forms.Label();
+            this.txtRunOptionsOdyssey = new System.Windows.Forms.TextBox();
+            this.lblOldDataOptionsOdyssey = new System.Windows.Forms.Label();
+            this.txtOldDataOptionsOdyssey = new System.Windows.Forms.TextBox();
+            this.lblRaresOptionsOdyssey = new System.Windows.Forms.Label();
+            this.txtRaresOptionsOdyssey = new System.Windows.Forms.TextBox();
             this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker4 = new System.ComponentModel.BackgroundWorker();
             this.panRunOptions = new System.Windows.Forms.Panel();
+            this.panShipVendorOptions = new System.Windows.Forms.Panel();
+            this.panMarketOptions = new System.Windows.Forms.Panel();
+            this.panOldDataOptions = new System.Windows.Forms.Panel();
+            this.grpMarketOptionsType = new System.Windows.Forms.GroupBox();
             this.lblUpdateNotify = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.pagOutput = new System.Windows.Forms.TabPage();
@@ -324,13 +335,17 @@
             this.grpRaresOptionsType = new System.Windows.Forms.GroupBox();
             this.grpRaresOptionsSort = new System.Windows.Forms.GroupBox();
             this.panTradeOptions = new System.Windows.Forms.Panel();
-            this.panMarketOptions = new System.Windows.Forms.Panel();
-            this.grpMarketOptionsType = new System.Windows.Forms.GroupBox();
-            this.panShipVendorOptions = new System.Windows.Forms.Panel();
             this.panNavOptions = new System.Windows.Forms.Panel();
-            this.panOldDataOptions = new System.Windows.Forms.Panel();
             this.panLocalOptions = new System.Windows.Forms.Panel();
             this.panOptions = new System.Windows.Forms.Panel();
+            this.txtSellOptionsOdyssey = new System.Windows.Forms.TextBox();
+            this.lblBuyOptionsOdyssey = new System.Windows.Forms.Label();
+            this.txtBuyOptionsOdyssey = new System.Windows.Forms.TextBox();
+            this.lblNavOptionsOdyssey = new System.Windows.Forms.Label();
+            this.txtNavOptionsOdyssey = new System.Windows.Forms.TextBox();
+            this.lblLocalOptionsOdyssey = new System.Windows.Forms.Label();
+            this.txtLocalOptionsOdyssey = new System.Windows.Forms.TextBox();
+            lblSellOptionsOdyssey = new System.Windows.Forms.Label();
             this.mnuSetValues.SuspendLayout();
             this.mnuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numRunOptionsRoutes)).BeginInit();
@@ -377,6 +392,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numLocalOptionsLy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOldDataOptionsMaxLSDistance)).BeginInit();
             this.panRunOptions.SuspendLayout();
+            this.panShipVendorOptions.SuspendLayout();
+            this.panMarketOptions.SuspendLayout();
+            this.panOldDataOptions.SuspendLayout();
+            this.grpMarketOptionsType.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.pagOutput.SuspendLayout();
             this.tabSavedPage1.SuspendLayout();
@@ -402,11 +421,7 @@
             this.grpRaresOptionsType.SuspendLayout();
             this.grpRaresOptionsSort.SuspendLayout();
             this.panTradeOptions.SuspendLayout();
-            this.panMarketOptions.SuspendLayout();
-            this.grpMarketOptionsType.SuspendLayout();
-            this.panShipVendorOptions.SuspendLayout();
             this.panNavOptions.SuspendLayout();
-            this.panOldDataOptions.SuspendLayout();
             this.panLocalOptions.SuspendLayout();
             this.panOptions.SuspendLayout();
             this.SuspendLayout();
@@ -1691,7 +1706,7 @@
             // lblBuyOptionsPlanetary
             // 
             this.lblBuyOptionsPlanetary.AutoSize = true;
-            this.lblBuyOptionsPlanetary.Location = new System.Drawing.Point(4, 140);
+            this.lblBuyOptionsPlanetary.Location = new System.Drawing.Point(4, 139);
             this.lblBuyOptionsPlanetary.Name = "lblBuyOptionsPlanetary";
             this.lblBuyOptionsPlanetary.Size = new System.Drawing.Size(54, 13);
             this.lblBuyOptionsPlanetary.TabIndex = 75;
@@ -1701,7 +1716,7 @@
             // txtBuyOptionsPlanetary
             // 
             this.txtBuyOptionsPlanetary.ContextMenuStrip = this.mnuSetValues;
-            this.txtBuyOptionsPlanetary.Location = new System.Drawing.Point(64, 137);
+            this.txtBuyOptionsPlanetary.Location = new System.Drawing.Point(64, 135);
             this.txtBuyOptionsPlanetary.MaxLength = 3;
             this.txtBuyOptionsPlanetary.Name = "txtBuyOptionsPlanetary";
             this.txtBuyOptionsPlanetary.Size = new System.Drawing.Size(32, 20);
@@ -1725,7 +1740,7 @@
             // lblBuyOptionsPads
             // 
             this.lblBuyOptionsPads.AutoSize = true;
-            this.lblBuyOptionsPads.Location = new System.Drawing.Point(242, 141);
+            this.lblBuyOptionsPads.Location = new System.Drawing.Point(120, 113);
             this.lblBuyOptionsPads.Name = "lblBuyOptionsPads";
             this.lblBuyOptionsPads.Size = new System.Drawing.Size(34, 13);
             this.lblBuyOptionsPads.TabIndex = 78;
@@ -1735,7 +1750,7 @@
             // txtBuyOptionsPads
             // 
             this.txtBuyOptionsPads.ContextMenuStrip = this.mnuSetValues;
-            this.txtBuyOptionsPads.Location = new System.Drawing.Point(282, 137);
+            this.txtBuyOptionsPads.Location = new System.Drawing.Point(160, 109);
             this.txtBuyOptionsPads.MaxLength = 3;
             this.txtBuyOptionsPads.Name = "txtBuyOptionsPads";
             this.txtBuyOptionsPads.Size = new System.Drawing.Size(32, 20);
@@ -1822,7 +1837,7 @@
             // optBuyOptionsDistance
             // 
             this.optBuyOptionsDistance.AutoSize = true;
-            this.optBuyOptionsDistance.Location = new System.Drawing.Point(88, 6);
+            this.optBuyOptionsDistance.Location = new System.Drawing.Point(88, 8);
             this.optBuyOptionsDistance.Name = "optBuyOptionsDistance";
             this.optBuyOptionsDistance.Size = new System.Drawing.Size(67, 17);
             this.optBuyOptionsDistance.TabIndex = 66;
@@ -1834,7 +1849,7 @@
             // optBuyOptionsPrice
             // 
             this.optBuyOptionsPrice.AutoSize = true;
-            this.optBuyOptionsPrice.Location = new System.Drawing.Point(161, 6);
+            this.optBuyOptionsPrice.Location = new System.Drawing.Point(161, 8);
             this.optBuyOptionsPrice.Name = "optBuyOptionsPrice";
             this.optBuyOptionsPrice.Size = new System.Drawing.Size(49, 17);
             this.optBuyOptionsPrice.TabIndex = 67;
@@ -1847,7 +1862,7 @@
             // optBuyOptionsSupply
             // 
             this.optBuyOptionsSupply.AutoSize = true;
-            this.optBuyOptionsSupply.Location = new System.Drawing.Point(216, 6);
+            this.optBuyOptionsSupply.Location = new System.Drawing.Point(216, 8);
             this.optBuyOptionsSupply.Name = "optBuyOptionsSupply";
             this.optBuyOptionsSupply.Size = new System.Drawing.Size(57, 17);
             this.optBuyOptionsSupply.TabIndex = 68;
@@ -1879,7 +1894,7 @@
             // optSellOptionsSupply
             // 
             this.optSellOptionsSupply.AutoSize = true;
-            this.optSellOptionsSupply.Location = new System.Drawing.Point(88, 6);
+            this.optSellOptionsSupply.Location = new System.Drawing.Point(88, 8);
             this.optSellOptionsSupply.Name = "optSellOptionsSupply";
             this.optSellOptionsSupply.Size = new System.Drawing.Size(57, 17);
             this.optSellOptionsSupply.TabIndex = 66;
@@ -1891,7 +1906,7 @@
             // optSellOptionsPrice
             // 
             this.optSellOptionsPrice.AutoSize = true;
-            this.optSellOptionsPrice.Location = new System.Drawing.Point(161, 6);
+            this.optSellOptionsPrice.Location = new System.Drawing.Point(161, 8);
             this.optSellOptionsPrice.Name = "optSellOptionsPrice";
             this.optSellOptionsPrice.Size = new System.Drawing.Size(49, 17);
             this.optSellOptionsPrice.TabIndex = 67;
@@ -1965,7 +1980,7 @@
             // lblSellOptionsPads
             // 
             this.lblSellOptionsPads.AutoSize = true;
-            this.lblSellOptionsPads.Location = new System.Drawing.Point(242, 139);
+            this.lblSellOptionsPads.Location = new System.Drawing.Point(120, 112);
             this.lblSellOptionsPads.Name = "lblSellOptionsPads";
             this.lblSellOptionsPads.Size = new System.Drawing.Size(34, 13);
             this.lblSellOptionsPads.TabIndex = 78;
@@ -2001,7 +2016,7 @@
             // txtSellOptionsPads
             // 
             this.txtSellOptionsPads.ContextMenuStrip = this.mnuSetValues;
-            this.txtSellOptionsPads.Location = new System.Drawing.Point(282, 136);
+            this.txtSellOptionsPads.Location = new System.Drawing.Point(160, 109);
             this.txtSellOptionsPads.MaxLength = 3;
             this.txtSellOptionsPads.Name = "txtSellOptionsPads";
             this.txtSellOptionsPads.Size = new System.Drawing.Size(32, 20);
@@ -2023,7 +2038,7 @@
             // lblSellOptionsPlanetary
             // 
             this.lblSellOptionsPlanetary.AutoSize = true;
-            this.lblSellOptionsPlanetary.Location = new System.Drawing.Point(8, 138);
+            this.lblSellOptionsPlanetary.Location = new System.Drawing.Point(4, 139);
             this.lblSellOptionsPlanetary.Name = "lblSellOptionsPlanetary";
             this.lblSellOptionsPlanetary.Size = new System.Drawing.Size(54, 13);
             this.lblSellOptionsPlanetary.TabIndex = 75;
@@ -2033,7 +2048,7 @@
             // txtSellOptionsPlanetary
             // 
             this.txtSellOptionsPlanetary.ContextMenuStrip = this.mnuSetValues;
-            this.txtSellOptionsPlanetary.Location = new System.Drawing.Point(68, 135);
+            this.txtSellOptionsPlanetary.Location = new System.Drawing.Point(64, 135);
             this.txtSellOptionsPlanetary.MaxLength = 3;
             this.txtSellOptionsPlanetary.Name = "txtSellOptionsPlanetary";
             this.txtSellOptionsPlanetary.Size = new System.Drawing.Size(32, 20);
@@ -2152,7 +2167,7 @@
             // lblRaresOptionsPads
             // 
             this.lblRaresOptionsPads.AutoSize = true;
-            this.lblRaresOptionsPads.Location = new System.Drawing.Point(242, 59);
+            this.lblRaresOptionsPads.Location = new System.Drawing.Point(127, 85);
             this.lblRaresOptionsPads.Name = "lblRaresOptionsPads";
             this.lblRaresOptionsPads.Size = new System.Drawing.Size(34, 13);
             this.lblRaresOptionsPads.TabIndex = 78;
@@ -2163,7 +2178,7 @@
             // 
             this.numRaresOptionsLy.ContextMenuStrip = this.mnuSetValues;
             this.numRaresOptionsLy.DecimalPlaces = 2;
-            this.numRaresOptionsLy.Location = new System.Drawing.Point(142, 55);
+            this.numRaresOptionsLy.Location = new System.Drawing.Point(136, 56);
             this.numRaresOptionsLy.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -2188,7 +2203,7 @@
             // txtRaresOptionsPads
             // 
             this.txtRaresOptionsPads.ContextMenuStrip = this.mnuSetValues;
-            this.txtRaresOptionsPads.Location = new System.Drawing.Point(282, 56);
+            this.txtRaresOptionsPads.Location = new System.Drawing.Point(167, 82);
             this.txtRaresOptionsPads.MaxLength = 3;
             this.txtRaresOptionsPads.Name = "txtRaresOptionsPads";
             this.txtRaresOptionsPads.Size = new System.Drawing.Size(32, 20);
@@ -2200,7 +2215,7 @@
             // lblRaresOptionsLimit
             // 
             this.lblRaresOptionsLimit.AutoSize = true;
-            this.lblRaresOptionsLimit.Location = new System.Drawing.Point(93, 31);
+            this.lblRaresOptionsLimit.Location = new System.Drawing.Point(85, 31);
             this.lblRaresOptionsLimit.Name = "lblRaresOptionsLimit";
             this.lblRaresOptionsLimit.Size = new System.Drawing.Size(45, 13);
             this.lblRaresOptionsLimit.TabIndex = 67;
@@ -2257,7 +2272,7 @@
             // numRaresOptionsLimit
             // 
             this.numRaresOptionsLimit.ContextMenuStrip = this.mnuSetValues;
-            this.numRaresOptionsLimit.Location = new System.Drawing.Point(144, 29);
+            this.numRaresOptionsLimit.Location = new System.Drawing.Point(136, 29);
             this.numRaresOptionsLimit.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -2294,7 +2309,7 @@
             // lblRaresOptionsLy
             // 
             this.lblRaresOptionsLy.AutoSize = true;
-            this.lblRaresOptionsLy.Location = new System.Drawing.Point(113, 59);
+            this.lblRaresOptionsLy.Location = new System.Drawing.Point(107, 60);
             this.lblRaresOptionsLy.Name = "lblRaresOptionsLy";
             this.lblRaresOptionsLy.Size = new System.Drawing.Size(23, 13);
             this.lblRaresOptionsLy.TabIndex = 68;
@@ -2340,7 +2355,7 @@
             // optRaresOptionsLegal
             // 
             this.optRaresOptionsLegal.AutoSize = true;
-            this.optRaresOptionsLegal.Location = new System.Drawing.Point(88, 7);
+            this.optRaresOptionsLegal.Location = new System.Drawing.Point(88, 8);
             this.optRaresOptionsLegal.Name = "optRaresOptionsLegal";
             this.optRaresOptionsLegal.Size = new System.Drawing.Size(51, 17);
             this.optRaresOptionsLegal.TabIndex = 66;
@@ -2352,7 +2367,7 @@
             // optRaresOptionsIllegal
             // 
             this.optRaresOptionsIllegal.AutoSize = true;
-            this.optRaresOptionsIllegal.Location = new System.Drawing.Point(161, 7);
+            this.optRaresOptionsIllegal.Location = new System.Drawing.Point(161, 8);
             this.optRaresOptionsIllegal.Name = "optRaresOptionsIllegal";
             this.optRaresOptionsIllegal.Size = new System.Drawing.Size(52, 17);
             this.optRaresOptionsIllegal.TabIndex = 67;
@@ -2364,7 +2379,7 @@
             // optRaresOptionsAll
             // 
             this.optRaresOptionsAll.AutoSize = true;
-            this.optRaresOptionsAll.Location = new System.Drawing.Point(219, 7);
+            this.optRaresOptionsAll.Location = new System.Drawing.Point(219, 8);
             this.optRaresOptionsAll.Name = "optRaresOptionsAll";
             this.optRaresOptionsAll.Size = new System.Drawing.Size(36, 17);
             this.optRaresOptionsAll.TabIndex = 87;
@@ -2570,7 +2585,7 @@
             // lblNavOptionsPads
             // 
             this.lblNavOptionsPads.AutoSize = true;
-            this.lblNavOptionsPads.Location = new System.Drawing.Point(241, 144);
+            this.lblNavOptionsPads.Location = new System.Drawing.Point(240, 167);
             this.lblNavOptionsPads.Name = "lblNavOptionsPads";
             this.lblNavOptionsPads.Size = new System.Drawing.Size(34, 13);
             this.lblNavOptionsPads.TabIndex = 82;
@@ -2580,7 +2595,7 @@
             // txtNavOptionsPads
             // 
             this.txtNavOptionsPads.ContextMenuStrip = this.mnuSetValues;
-            this.txtNavOptionsPads.Location = new System.Drawing.Point(281, 141);
+            this.txtNavOptionsPads.Location = new System.Drawing.Point(280, 164);
             this.txtNavOptionsPads.MaxLength = 3;
             this.txtNavOptionsPads.Name = "txtNavOptionsPads";
             this.txtNavOptionsPads.Size = new System.Drawing.Size(32, 20);
@@ -2704,7 +2719,7 @@
             // 
             this.chkOldDataOptionsRoute.AutoSize = true;
             this.chkOldDataOptionsRoute.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkOldDataOptionsRoute.Location = new System.Drawing.Point(211, 87);
+            this.chkOldDataOptionsRoute.Location = new System.Drawing.Point(211, 113);
             this.chkOldDataOptionsRoute.Name = "chkOldDataOptionsRoute";
             this.chkOldDataOptionsRoute.Size = new System.Drawing.Size(97, 17);
             this.chkOldDataOptionsRoute.TabIndex = 5;
@@ -2789,7 +2804,7 @@
             // lblLocalOptionsPads
             // 
             this.lblLocalOptionsPads.AutoSize = true;
-            this.lblLocalOptionsPads.Location = new System.Drawing.Point(241, 86);
+            this.lblLocalOptionsPads.Location = new System.Drawing.Point(241, 112);
             this.lblLocalOptionsPads.Name = "lblLocalOptionsPads";
             this.lblLocalOptionsPads.Size = new System.Drawing.Size(34, 13);
             this.lblLocalOptionsPads.TabIndex = 100;
@@ -2799,7 +2814,7 @@
             // txtLocalOptionsPads
             // 
             this.txtLocalOptionsPads.ContextMenuStrip = this.mnuSetValues;
-            this.txtLocalOptionsPads.Location = new System.Drawing.Point(280, 84);
+            this.txtLocalOptionsPads.Location = new System.Drawing.Point(280, 110);
             this.txtLocalOptionsPads.MaxLength = 3;
             this.txtLocalOptionsPads.Name = "txtLocalOptionsPads";
             this.txtLocalOptionsPads.Size = new System.Drawing.Size(32, 20);
@@ -2987,12 +3002,13 @@
             this.lvShipVendorOptionsShips.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.hdrShip,
             this.hdrCost});
+            this.lvShipVendorOptionsShips.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvShipVendorOptionsShips.FullRowSelect = true;
             this.lvShipVendorOptionsShips.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.lvShipVendorOptionsShips.HideSelection = false;
             this.lvShipVendorOptionsShips.Location = new System.Drawing.Point(0, 0);
             this.lvShipVendorOptionsShips.Name = "lvShipVendorOptionsShips";
-            this.lvShipVendorOptionsShips.Size = new System.Drawing.Size(317, 190);
+            this.lvShipVendorOptionsShips.Size = new System.Drawing.Size(320, 195);
             this.lvShipVendorOptionsShips.TabIndex = 15;
             this.tipToolTips.SetToolTip(this.lvShipVendorOptionsShips, "Tooltip-097");
             this.lvShipVendorOptionsShips.UseCompatibleStateImageBehavior = false;
@@ -3145,7 +3161,7 @@
             // lblOldDataOptionsPads
             // 
             this.lblOldDataOptionsPads.AutoSize = true;
-            this.lblOldDataOptionsPads.Location = new System.Drawing.Point(233, 64);
+            this.lblOldDataOptionsPads.Location = new System.Drawing.Point(233, 90);
             this.lblOldDataOptionsPads.Name = "lblOldDataOptionsPads";
             this.lblOldDataOptionsPads.Size = new System.Drawing.Size(34, 13);
             this.lblOldDataOptionsPads.TabIndex = 81;
@@ -3154,7 +3170,7 @@
             // 
             // txtOldDataOptionsPads
             // 
-            this.txtOldDataOptionsPads.Location = new System.Drawing.Point(273, 61);
+            this.txtOldDataOptionsPads.Location = new System.Drawing.Point(273, 87);
             this.txtOldDataOptionsPads.MaxLength = 3;
             this.txtOldDataOptionsPads.Name = "txtOldDataOptionsPads";
             this.txtOldDataOptionsPads.Size = new System.Drawing.Size(35, 20);
@@ -3166,7 +3182,7 @@
             // lblRunOptionsFleetCarriers
             // 
             this.lblRunOptionsFleetCarriers.AutoSize = true;
-            this.lblRunOptionsFleetCarriers.Location = new System.Drawing.Point(191, 138);
+            this.lblRunOptionsFleetCarriers.Location = new System.Drawing.Point(191, 139);
             this.lblRunOptionsFleetCarriers.Name = "lblRunOptionsFleetCarriers";
             this.lblRunOptionsFleetCarriers.Size = new System.Drawing.Size(71, 13);
             this.lblRunOptionsFleetCarriers.TabIndex = 73;
@@ -3176,7 +3192,7 @@
             // txtRunOptionsFleetCarriers
             // 
             this.txtRunOptionsFleetCarriers.ContextMenuStrip = this.mnuSetValues;
-            this.txtRunOptionsFleetCarriers.Location = new System.Drawing.Point(268, 135);
+            this.txtRunOptionsFleetCarriers.Location = new System.Drawing.Point(268, 136);
             this.txtRunOptionsFleetCarriers.MaxLength = 3;
             this.txtRunOptionsFleetCarriers.Name = "txtRunOptionsFleetCarriers";
             this.txtRunOptionsFleetCarriers.Size = new System.Drawing.Size(32, 20);
@@ -3210,7 +3226,7 @@
             // lblRaresOptionsFleetCarriers
             // 
             this.lblRaresOptionsFleetCarriers.AutoSize = true;
-            this.lblRaresOptionsFleetCarriers.Location = new System.Drawing.Point(205, 85);
+            this.lblRaresOptionsFleetCarriers.Location = new System.Drawing.Point(205, 59);
             this.lblRaresOptionsFleetCarriers.Name = "lblRaresOptionsFleetCarriers";
             this.lblRaresOptionsFleetCarriers.Size = new System.Drawing.Size(71, 13);
             this.lblRaresOptionsFleetCarriers.TabIndex = 89;
@@ -3220,7 +3236,7 @@
             // txtRaresOptionsFleetCarriers
             // 
             this.txtRaresOptionsFleetCarriers.ContextMenuStrip = this.mnuSetValues;
-            this.txtRaresOptionsFleetCarriers.Location = new System.Drawing.Point(282, 82);
+            this.txtRaresOptionsFleetCarriers.Location = new System.Drawing.Point(282, 56);
             this.txtRaresOptionsFleetCarriers.MaxLength = 3;
             this.txtRaresOptionsFleetCarriers.Name = "txtRaresOptionsFleetCarriers";
             this.txtRaresOptionsFleetCarriers.Size = new System.Drawing.Size(32, 20);
@@ -3232,7 +3248,7 @@
             // lblSellOptionsFleetCarriers
             // 
             this.lblSellOptionsFleetCarriers.AutoSize = true;
-            this.lblSellOptionsFleetCarriers.Location = new System.Drawing.Point(115, 139);
+            this.lblSellOptionsFleetCarriers.Location = new System.Drawing.Point(107, 139);
             this.lblSellOptionsFleetCarriers.Name = "lblSellOptionsFleetCarriers";
             this.lblSellOptionsFleetCarriers.Size = new System.Drawing.Size(71, 13);
             this.lblSellOptionsFleetCarriers.TabIndex = 90;
@@ -3242,7 +3258,7 @@
             // txtSellOptionsFleetCarriers
             // 
             this.txtSellOptionsFleetCarriers.ContextMenuStrip = this.mnuSetValues;
-            this.txtSellOptionsFleetCarriers.Location = new System.Drawing.Point(192, 135);
+            this.txtSellOptionsFleetCarriers.Location = new System.Drawing.Point(184, 135);
             this.txtSellOptionsFleetCarriers.MaxLength = 3;
             this.txtSellOptionsFleetCarriers.Name = "txtSellOptionsFleetCarriers";
             this.txtSellOptionsFleetCarriers.Size = new System.Drawing.Size(32, 20);
@@ -3254,7 +3270,7 @@
             // lblBuyOptionsFleetCarriers
             // 
             this.lblBuyOptionsFleetCarriers.AutoSize = true;
-            this.lblBuyOptionsFleetCarriers.Location = new System.Drawing.Point(113, 141);
+            this.lblBuyOptionsFleetCarriers.Location = new System.Drawing.Point(107, 139);
             this.lblBuyOptionsFleetCarriers.Name = "lblBuyOptionsFleetCarriers";
             this.lblBuyOptionsFleetCarriers.Size = new System.Drawing.Size(71, 13);
             this.lblBuyOptionsFleetCarriers.TabIndex = 88;
@@ -3264,7 +3280,7 @@
             // txtBuyOptionsFleetCarriers
             // 
             this.txtBuyOptionsFleetCarriers.ContextMenuStrip = this.mnuSetValues;
-            this.txtBuyOptionsFleetCarriers.Location = new System.Drawing.Point(190, 137);
+            this.txtBuyOptionsFleetCarriers.Location = new System.Drawing.Point(184, 135);
             this.txtBuyOptionsFleetCarriers.MaxLength = 3;
             this.txtBuyOptionsFleetCarriers.Name = "txtBuyOptionsFleetCarriers";
             this.txtBuyOptionsFleetCarriers.Size = new System.Drawing.Size(32, 20);
@@ -3352,6 +3368,72 @@
             this.tipToolTips.SetToolTip(this.cboBuyOptionsCommodities, "Tooltip-011");
             this.cboBuyOptionsCommodities.ValueSeparator = ", ";
             // 
+            // lblRunOptionsOdyssey
+            // 
+            this.lblRunOptionsOdyssey.AutoSize = true;
+            this.lblRunOptionsOdyssey.Location = new System.Drawing.Point(212, 165);
+            this.lblRunOptionsOdyssey.Name = "lblRunOptionsOdyssey";
+            this.lblRunOptionsOdyssey.Size = new System.Drawing.Size(50, 13);
+            this.lblRunOptionsOdyssey.TabIndex = 75;
+            this.lblRunOptionsOdyssey.Text = "Odyssey:";
+            this.tipToolTips.SetToolTip(this.lblRunOptionsOdyssey, "Tooltip-101");
+            // 
+            // txtRunOptionsOdyssey
+            // 
+            this.txtRunOptionsOdyssey.ContextMenuStrip = this.mnuSetValues;
+            this.txtRunOptionsOdyssey.Location = new System.Drawing.Point(268, 162);
+            this.txtRunOptionsOdyssey.MaxLength = 3;
+            this.txtRunOptionsOdyssey.Name = "txtRunOptionsOdyssey";
+            this.txtRunOptionsOdyssey.Size = new System.Drawing.Size(32, 20);
+            this.txtRunOptionsOdyssey.TabIndex = 74;
+            this.txtRunOptionsOdyssey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tipToolTips.SetToolTip(this.txtRunOptionsOdyssey, "Tooltip-101");
+            this.txtRunOptionsOdyssey.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_Odyssey_KeyPress);
+            // 
+            // lblOldDataOptionsOdyssey
+            // 
+            this.lblOldDataOptionsOdyssey.AutoSize = true;
+            this.lblOldDataOptionsOdyssey.Location = new System.Drawing.Point(217, 64);
+            this.lblOldDataOptionsOdyssey.Name = "lblOldDataOptionsOdyssey";
+            this.lblOldDataOptionsOdyssey.Size = new System.Drawing.Size(50, 13);
+            this.lblOldDataOptionsOdyssey.TabIndex = 85;
+            this.lblOldDataOptionsOdyssey.Text = "Odyssey:";
+            this.tipToolTips.SetToolTip(this.lblOldDataOptionsOdyssey, "Tooltip-101");
+            // 
+            // txtOldDataOptionsOdyssey
+            // 
+            this.txtOldDataOptionsOdyssey.ContextMenuStrip = this.mnuSetValues;
+            this.txtOldDataOptionsOdyssey.Location = new System.Drawing.Point(273, 61);
+            this.txtOldDataOptionsOdyssey.MaxLength = 3;
+            this.txtOldDataOptionsOdyssey.Name = "txtOldDataOptionsOdyssey";
+            this.txtOldDataOptionsOdyssey.Size = new System.Drawing.Size(35, 20);
+            this.txtOldDataOptionsOdyssey.TabIndex = 84;
+            this.txtOldDataOptionsOdyssey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tipToolTips.SetToolTip(this.txtOldDataOptionsOdyssey, "Tooltip-101");
+            this.txtOldDataOptionsOdyssey.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_Odyssey_KeyPress);
+            // 
+            // lblRaresOptionsOdyssey
+            // 
+            this.lblRaresOptionsOdyssey.AutoSize = true;
+            this.lblRaresOptionsOdyssey.Location = new System.Drawing.Point(226, 86);
+            this.lblRaresOptionsOdyssey.Name = "lblRaresOptionsOdyssey";
+            this.lblRaresOptionsOdyssey.Size = new System.Drawing.Size(50, 13);
+            this.lblRaresOptionsOdyssey.TabIndex = 91;
+            this.lblRaresOptionsOdyssey.Text = "Odyssey:";
+            this.tipToolTips.SetToolTip(this.lblRaresOptionsOdyssey, "Tooltip-101");
+            // 
+            // textBox1
+            // 
+            this.txtRaresOptionsOdyssey.ContextMenuStrip = this.mnuSetValues;
+            this.txtRaresOptionsOdyssey.Location = new System.Drawing.Point(282, 82);
+            this.txtRaresOptionsOdyssey.MaxLength = 3;
+            this.txtRaresOptionsOdyssey.Name = "textBox1";
+            this.txtRaresOptionsOdyssey.Size = new System.Drawing.Size(32, 20);
+            this.txtRaresOptionsOdyssey.TabIndex = 90;
+            this.txtRaresOptionsOdyssey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tipToolTips.SetToolTip(this.txtRaresOptionsOdyssey, "Tooltip-100");
+            this.txtRaresOptionsOdyssey.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_Odyssey_KeyPress);
+            // 
             // backgroundWorker3
             // 
             this.backgroundWorker3.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorker3_DoWork);
@@ -3364,6 +3446,8 @@
             // 
             // panRunOptions
             // 
+            this.panRunOptions.Controls.Add(this.lblRunOptionsOdyssey);
+            this.panRunOptions.Controls.Add(this.txtRunOptionsOdyssey);
             this.panRunOptions.Controls.Add(this.lblRunOptionsFleetCarriers);
             this.panRunOptions.Controls.Add(this.txtRunOptionsFleetCarriers);
             this.panRunOptions.Controls.Add(this.chkIncludeInsurance);
@@ -3387,10 +3471,75 @@
             this.panRunOptions.Controls.Add(this.lblRunOptionsRoutes);
             this.panRunOptions.Controls.Add(this.cboRunOptionsDestination);
             this.panRunOptions.Controls.Add(this.chkRunOptionsUnique);
-            this.panRunOptions.Location = new System.Drawing.Point(1, 1);
+            this.panRunOptions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panRunOptions.Location = new System.Drawing.Point(0, 0);
             this.panRunOptions.Name = "panRunOptions";
             this.panRunOptions.Size = new System.Drawing.Size(320, 195);
             this.panRunOptions.TabIndex = 1;
+            // 
+            // panShipVendorOptions
+            // 
+            this.panShipVendorOptions.Controls.Add(this.lvShipVendorOptionsShips);
+            this.panShipVendorOptions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panShipVendorOptions.Location = new System.Drawing.Point(0, 0);
+            this.panShipVendorOptions.Name = "panShipVendorOptions";
+            this.panShipVendorOptions.Size = new System.Drawing.Size(320, 195);
+            this.panShipVendorOptions.TabIndex = 6;
+            this.panShipVendorOptions.Visible = false;
+            this.panShipVendorOptions.EnabledChanged += new System.EventHandler(this.EventHandler_OptionsPanel_StateChanged);
+            this.panShipVendorOptions.VisibleChanged += new System.EventHandler(this.EventHandler_OptionsPanel_StateChanged);
+            // 
+            // panMarketOptions
+            // 
+            this.panMarketOptions.Controls.Add(this.grpMarketOptionsType);
+            this.panMarketOptions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panMarketOptions.Location = new System.Drawing.Point(0, 0);
+            this.panMarketOptions.Name = "panMarketOptions";
+            this.panMarketOptions.Size = new System.Drawing.Size(320, 195);
+            this.panMarketOptions.TabIndex = 5;
+            this.panMarketOptions.Visible = false;
+            this.panMarketOptions.EnabledChanged += new System.EventHandler(this.EventHandler_OptionsPanel_StateChanged);
+            this.panMarketOptions.VisibleChanged += new System.EventHandler(this.EventHandler_OptionsPanel_StateChanged);
+            // 
+            // panOldDataOptions
+            // 
+            this.panOldDataOptions.Controls.Add(this.lblOldDataOptionsOdyssey);
+            this.panOldDataOptions.Controls.Add(this.txtOldDataOptionsOdyssey);
+            this.panOldDataOptions.Controls.Add(this.lblOldDataOptionsFleetCarriers);
+            this.panOldDataOptions.Controls.Add(this.txtOldDataOptionsFleetCarriers);
+            this.panOldDataOptions.Controls.Add(this.lblOldDataOptionsPads);
+            this.panOldDataOptions.Controls.Add(this.txtOldDataOptionsPads);
+            this.panOldDataOptions.Controls.Add(this.lblOldDataOptionsPlanetary);
+            this.panOldDataOptions.Controls.Add(this.txtOldDataOptionsPlanetary);
+            this.panOldDataOptions.Controls.Add(this.numOldDataOptionsMaxLSDistance);
+            this.panOldDataOptions.Controls.Add(this.lblOldDataOptionsMaxLSDistance);
+            this.panOldDataOptions.Controls.Add(this.chkOldDataOptionsRoute);
+            this.panOldDataOptions.Controls.Add(this.lblOldDataOptionsMinAge);
+            this.panOldDataOptions.Controls.Add(this.numOldDataOptionsMinAge);
+            this.panOldDataOptions.Controls.Add(this.numOldDataOptionsNearLy);
+            this.panOldDataOptions.Controls.Add(this.lblOldDataOptionsLimit);
+            this.panOldDataOptions.Controls.Add(this.numOldDataOptionsLimit);
+            this.panOldDataOptions.Controls.Add(this.lblOldDataOptionsNearLy);
+            this.panOldDataOptions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panOldDataOptions.Location = new System.Drawing.Point(0, 0);
+            this.panOldDataOptions.Name = "panOldDataOptions";
+            this.panOldDataOptions.Size = new System.Drawing.Size(320, 195);
+            this.panOldDataOptions.TabIndex = 6;
+            this.panOldDataOptions.Visible = false;
+            this.panOldDataOptions.EnabledChanged += new System.EventHandler(this.EventHandler_OptionsPanel_StateChanged);
+            this.panOldDataOptions.VisibleChanged += new System.EventHandler(this.EventHandler_OptionsPanel_StateChanged);
+            // 
+            // grpMarketOptionsType
+            // 
+            this.grpMarketOptionsType.Controls.Add(this.optMarketOptionsAll);
+            this.grpMarketOptionsType.Controls.Add(this.lblMarketOptionsType);
+            this.grpMarketOptionsType.Controls.Add(this.optMarketOptionsBuy);
+            this.grpMarketOptionsType.Controls.Add(this.optMarketOptionsSell);
+            this.grpMarketOptionsType.Location = new System.Drawing.Point(4, 7);
+            this.grpMarketOptionsType.Name = "grpMarketOptionsType";
+            this.grpMarketOptionsType.Size = new System.Drawing.Size(310, 29);
+            this.grpMarketOptionsType.TabIndex = 86;
+            this.grpMarketOptionsType.TabStop = false;
             // 
             // lblUpdateNotify
             // 
@@ -3653,6 +3802,9 @@
             // 
             // panSellOptions
             // 
+            this.panSellOptions.Controls.Add(this.panMarketOptions);
+            this.panSellOptions.Controls.Add(lblSellOptionsOdyssey);
+            this.panSellOptions.Controls.Add(this.txtSellOptionsOdyssey);
             this.panSellOptions.Controls.Add(this.lblSellOptionsFleetCarriers);
             this.panSellOptions.Controls.Add(this.txtSellOptionsFleetCarriers);
             this.panSellOptions.Controls.Add(this.cboSellOptionsCommodities);
@@ -3675,7 +3827,8 @@
             this.panSellOptions.Controls.Add(this.lblSellOptionsNearLy);
             this.panSellOptions.Controls.Add(this.numSellOptionsDemand);
             this.panSellOptions.Controls.Add(this.lblSellOptionsDemand);
-            this.panSellOptions.Location = new System.Drawing.Point(1, 1);
+            this.panSellOptions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panSellOptions.Location = new System.Drawing.Point(0, 0);
             this.panSellOptions.Name = "panSellOptions";
             this.panSellOptions.Size = new System.Drawing.Size(320, 195);
             this.panSellOptions.TabIndex = 4;
@@ -3687,14 +3840,17 @@
             this.grpSellOptionsSort.Controls.Add(this.lblSellOptionsSort);
             this.grpSellOptionsSort.Controls.Add(this.optSellOptionsSupply);
             this.grpSellOptionsSort.Controls.Add(this.optSellOptionsPrice);
-            this.grpSellOptionsSort.Location = new System.Drawing.Point(4, 160);
+            this.grpSellOptionsSort.Location = new System.Drawing.Point(4, 162);
             this.grpSellOptionsSort.Name = "grpSellOptionsSort";
-            this.grpSellOptionsSort.Size = new System.Drawing.Size(310, 26);
+            this.grpSellOptionsSort.Size = new System.Drawing.Size(310, 29);
             this.grpSellOptionsSort.TabIndex = 86;
             this.grpSellOptionsSort.TabStop = false;
             // 
             // panBuyOptions
             // 
+            this.panBuyOptions.Controls.Add(this.panSellOptions);
+            this.panBuyOptions.Controls.Add(this.lblBuyOptionsOdyssey);
+            this.panBuyOptions.Controls.Add(this.txtBuyOptionsOdyssey);
             this.panBuyOptions.Controls.Add(this.lblBuyOptionsFleetCarriers);
             this.panBuyOptions.Controls.Add(this.txtBuyOptionsFleetCarriers);
             this.panBuyOptions.Controls.Add(this.grpBuyOptionsSort);
@@ -3718,7 +3874,8 @@
             this.panBuyOptions.Controls.Add(this.lblBuyOptionsNearLy);
             this.panBuyOptions.Controls.Add(this.numBuyOptionsSupply);
             this.panBuyOptions.Controls.Add(this.lblBuyOptionsSupply);
-            this.panBuyOptions.Location = new System.Drawing.Point(1, 1);
+            this.panBuyOptions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panBuyOptions.Location = new System.Drawing.Point(0, 0);
             this.panBuyOptions.Name = "panBuyOptions";
             this.panBuyOptions.Size = new System.Drawing.Size(320, 195);
             this.panBuyOptions.TabIndex = 3;
@@ -3734,7 +3891,7 @@
             this.grpBuyOptionsSort.Controls.Add(this.optBuyOptionsPrice);
             this.grpBuyOptionsSort.Location = new System.Drawing.Point(4, 162);
             this.grpBuyOptionsSort.Name = "grpBuyOptionsSort";
-            this.grpBuyOptionsSort.Size = new System.Drawing.Size(310, 26);
+            this.grpBuyOptionsSort.Size = new System.Drawing.Size(310, 29);
             this.grpBuyOptionsSort.TabIndex = 86;
             this.grpBuyOptionsSort.TabStop = false;
             // 
@@ -3926,6 +4083,8 @@
             // 
             // panRaresOptions
             // 
+            this.panRaresOptions.Controls.Add(this.lblRaresOptionsOdyssey);
+            this.panRaresOptions.Controls.Add(this.txtRaresOptionsOdyssey);
             this.panRaresOptions.Controls.Add(this.lblRaresOptionsFleetCarriers);
             this.panRaresOptions.Controls.Add(this.txtRaresOptionsFleetCarriers);
             this.panRaresOptions.Controls.Add(this.grpRaresOptionsType);
@@ -3943,11 +4102,11 @@
             this.panRaresOptions.Controls.Add(this.txtRaresOptionsFrom);
             this.panRaresOptions.Controls.Add(this.lblRaresOptionsFrom);
             this.panRaresOptions.Controls.Add(this.lblRaresOptionsLy);
-            this.panRaresOptions.Location = new System.Drawing.Point(1, 1);
+            this.panRaresOptions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panRaresOptions.Location = new System.Drawing.Point(0, 0);
             this.panRaresOptions.Name = "panRaresOptions";
             this.panRaresOptions.Size = new System.Drawing.Size(320, 195);
             this.panRaresOptions.TabIndex = 5;
-            this.panRaresOptions.Visible = false;
             this.panRaresOptions.EnabledChanged += new System.EventHandler(this.EventHandler_OptionsPanel_StateChanged);
             this.panRaresOptions.VisibleChanged += new System.EventHandler(this.EventHandler_OptionsPanel_StateChanged);
             // 
@@ -3959,7 +4118,7 @@
             this.grpRaresOptionsType.Controls.Add(this.optRaresOptionsIllegal);
             this.grpRaresOptionsType.Location = new System.Drawing.Point(7, 116);
             this.grpRaresOptionsType.Name = "grpRaresOptionsType";
-            this.grpRaresOptionsType.Size = new System.Drawing.Size(310, 26);
+            this.grpRaresOptionsType.Size = new System.Drawing.Size(310, 29);
             this.grpRaresOptionsType.TabIndex = 87;
             this.grpRaresOptionsType.TabStop = false;
             // 
@@ -3970,16 +4129,18 @@
             this.grpRaresOptionsSort.Controls.Add(this.optRaresOptionsPrice);
             this.grpRaresOptionsSort.Location = new System.Drawing.Point(7, 148);
             this.grpRaresOptionsSort.Name = "grpRaresOptionsSort";
-            this.grpRaresOptionsSort.Size = new System.Drawing.Size(310, 26);
+            this.grpRaresOptionsSort.Size = new System.Drawing.Size(310, 29);
             this.grpRaresOptionsSort.TabIndex = 86;
             this.grpRaresOptionsSort.TabStop = false;
             // 
             // panTradeOptions
             // 
+            this.panTradeOptions.Controls.Add(this.panBuyOptions);
             this.panTradeOptions.Controls.Add(this.btnTradeOptionsSwap);
             this.panTradeOptions.Controls.Add(this.lblTradeOptionDestination);
             this.panTradeOptions.Controls.Add(this.cboTradeOptionDestination);
-            this.panTradeOptions.Location = new System.Drawing.Point(1, 1);
+            this.panTradeOptions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panTradeOptions.Location = new System.Drawing.Point(0, 0);
             this.panTradeOptions.Name = "panTradeOptions";
             this.panTradeOptions.Size = new System.Drawing.Size(320, 195);
             this.panTradeOptions.TabIndex = 3;
@@ -3987,42 +4148,10 @@
             this.panTradeOptions.EnabledChanged += new System.EventHandler(this.EventHandler_OptionsPanel_StateChanged);
             this.panTradeOptions.VisibleChanged += new System.EventHandler(this.EventHandler_OptionsPanel_StateChanged);
             // 
-            // panMarketOptions
-            // 
-            this.panMarketOptions.Controls.Add(this.grpMarketOptionsType);
-            this.panMarketOptions.Location = new System.Drawing.Point(1, 1);
-            this.panMarketOptions.Name = "panMarketOptions";
-            this.panMarketOptions.Size = new System.Drawing.Size(320, 195);
-            this.panMarketOptions.TabIndex = 5;
-            this.panMarketOptions.Visible = false;
-            this.panMarketOptions.EnabledChanged += new System.EventHandler(this.EventHandler_OptionsPanel_StateChanged);
-            this.panMarketOptions.VisibleChanged += new System.EventHandler(this.EventHandler_OptionsPanel_StateChanged);
-            // 
-            // grpMarketOptionsType
-            // 
-            this.grpMarketOptionsType.Controls.Add(this.optMarketOptionsAll);
-            this.grpMarketOptionsType.Controls.Add(this.lblMarketOptionsType);
-            this.grpMarketOptionsType.Controls.Add(this.optMarketOptionsBuy);
-            this.grpMarketOptionsType.Controls.Add(this.optMarketOptionsSell);
-            this.grpMarketOptionsType.Location = new System.Drawing.Point(4, 7);
-            this.grpMarketOptionsType.Name = "grpMarketOptionsType";
-            this.grpMarketOptionsType.Size = new System.Drawing.Size(310, 29);
-            this.grpMarketOptionsType.TabIndex = 86;
-            this.grpMarketOptionsType.TabStop = false;
-            // 
-            // panShipVendorOptions
-            // 
-            this.panShipVendorOptions.Controls.Add(this.lvShipVendorOptionsShips);
-            this.panShipVendorOptions.Location = new System.Drawing.Point(1, 1);
-            this.panShipVendorOptions.Name = "panShipVendorOptions";
-            this.panShipVendorOptions.Size = new System.Drawing.Size(320, 195);
-            this.panShipVendorOptions.TabIndex = 6;
-            this.panShipVendorOptions.Visible = false;
-            this.panShipVendorOptions.EnabledChanged += new System.EventHandler(this.EventHandler_OptionsPanel_StateChanged);
-            this.panShipVendorOptions.VisibleChanged += new System.EventHandler(this.EventHandler_OptionsPanel_StateChanged);
-            // 
             // panNavOptions
             // 
+            this.panNavOptions.Controls.Add(this.lblNavOptionsOdyssey);
+            this.panNavOptions.Controls.Add(this.txtNavOptionsOdyssey);
             this.panNavOptions.Controls.Add(this.lblNavOptionsFleetCarriers);
             this.panNavOptions.Controls.Add(this.txtNavOptionsFleetCarriers);
             this.panNavOptions.Controls.Add(this.numNavOptionsLy);
@@ -4041,7 +4170,8 @@
             this.panNavOptions.Controls.Add(this.lblNavOptionsRefuelJumps);
             this.panNavOptions.Controls.Add(this.numNavOptionsRefuelJumps);
             this.panNavOptions.Controls.Add(this.cboNavOptionsDestination);
-            this.panNavOptions.Location = new System.Drawing.Point(1, 1);
+            this.panNavOptions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panNavOptions.Location = new System.Drawing.Point(0, 0);
             this.panNavOptions.Name = "panNavOptions";
             this.panNavOptions.Size = new System.Drawing.Size(320, 195);
             this.panNavOptions.TabIndex = 3;
@@ -4049,33 +4179,10 @@
             this.panNavOptions.EnabledChanged += new System.EventHandler(this.EventHandler_OptionsPanel_StateChanged);
             this.panNavOptions.VisibleChanged += new System.EventHandler(this.EventHandler_OptionsPanel_StateChanged);
             // 
-            // panOldDataOptions
-            // 
-            this.panOldDataOptions.Controls.Add(this.lblOldDataOptionsFleetCarriers);
-            this.panOldDataOptions.Controls.Add(this.txtOldDataOptionsFleetCarriers);
-            this.panOldDataOptions.Controls.Add(this.lblOldDataOptionsPads);
-            this.panOldDataOptions.Controls.Add(this.txtOldDataOptionsPads);
-            this.panOldDataOptions.Controls.Add(this.lblOldDataOptionsPlanetary);
-            this.panOldDataOptions.Controls.Add(this.txtOldDataOptionsPlanetary);
-            this.panOldDataOptions.Controls.Add(this.numOldDataOptionsMaxLSDistance);
-            this.panOldDataOptions.Controls.Add(this.lblOldDataOptionsMaxLSDistance);
-            this.panOldDataOptions.Controls.Add(this.chkOldDataOptionsRoute);
-            this.panOldDataOptions.Controls.Add(this.lblOldDataOptionsMinAge);
-            this.panOldDataOptions.Controls.Add(this.numOldDataOptionsMinAge);
-            this.panOldDataOptions.Controls.Add(this.numOldDataOptionsNearLy);
-            this.panOldDataOptions.Controls.Add(this.lblOldDataOptionsLimit);
-            this.panOldDataOptions.Controls.Add(this.numOldDataOptionsLimit);
-            this.panOldDataOptions.Controls.Add(this.lblOldDataOptionsNearLy);
-            this.panOldDataOptions.Location = new System.Drawing.Point(1, 0);
-            this.panOldDataOptions.Name = "panOldDataOptions";
-            this.panOldDataOptions.Size = new System.Drawing.Size(320, 195);
-            this.panOldDataOptions.TabIndex = 6;
-            this.panOldDataOptions.Visible = false;
-            this.panOldDataOptions.EnabledChanged += new System.EventHandler(this.EventHandler_OptionsPanel_StateChanged);
-            this.panOldDataOptions.VisibleChanged += new System.EventHandler(this.EventHandler_OptionsPanel_StateChanged);
-            // 
             // panLocalOptions
             // 
+            this.panLocalOptions.Controls.Add(this.lblLocalOptionsOdyssey);
+            this.panLocalOptions.Controls.Add(this.txtLocalOptionsOdyssey);
             this.panLocalOptions.Controls.Add(this.lblLocalOptionsFleetCarriers);
             this.panLocalOptions.Controls.Add(this.txtLocalOptionsFleetCarriers);
             this.panLocalOptions.Controls.Add(this.btnLocalOptionsAll);
@@ -4095,7 +4202,8 @@
             this.panLocalOptions.Controls.Add(this.chkLocalOptionsBlkMkt);
             this.panLocalOptions.Controls.Add(this.chkLocalOptionsRefuel);
             this.panLocalOptions.Controls.Add(this.chkLocalOptionsShipyard);
-            this.panLocalOptions.Location = new System.Drawing.Point(1, 1);
+            this.panLocalOptions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panLocalOptions.Location = new System.Drawing.Point(0, 0);
             this.panLocalOptions.Name = "panLocalOptions";
             this.panLocalOptions.Size = new System.Drawing.Size(320, 195);
             this.panLocalOptions.TabIndex = 5;
@@ -4114,12 +4222,99 @@
             this.panOptions.Controls.Add(this.panSellOptions);
             this.panOptions.Controls.Add(this.panBuyOptions);
             this.panOptions.Controls.Add(this.panTradeOptions);
-            this.panOptions.Controls.Add(this.panNavOptions);
-            this.panOptions.Controls.Add(this.panLocalOptions);
+            this.panOptions.Controls.Add(this.panNavOptions); this.panOptions.Controls.Add(this.panLocalOptions);
             this.panOptions.Location = new System.Drawing.Point(10, 33);
             this.panOptions.Name = "panOptions";
             this.panOptions.Size = new System.Drawing.Size(322, 197);
             this.panOptions.TabIndex = 1;
+            // 
+            // lblSellOptionsOdyssey
+            // 
+            lblSellOptionsOdyssey.AutoSize = true;
+            lblSellOptionsOdyssey.Location = new System.Drawing.Point(226, 139);
+            lblSellOptionsOdyssey.Name = "lblSellOptionsOdyssey";
+            lblSellOptionsOdyssey.Size = new System.Drawing.Size(50, 13);
+            lblSellOptionsOdyssey.TabIndex = 92;
+            lblSellOptionsOdyssey.Text = "Odyssey:";
+            this.tipToolTips.SetToolTip(lblSellOptionsOdyssey, "Tooltip-101");
+            // 
+            // txtSellOptionsOdyssey
+            // 
+            this.txtSellOptionsOdyssey.ContextMenuStrip = this.mnuSetValues;
+            this.txtSellOptionsOdyssey.Location = new System.Drawing.Point(282, 135);
+            this.txtSellOptionsOdyssey.MaxLength = 3;
+            this.txtSellOptionsOdyssey.Name = "txtSellOptionsOdyssey";
+            this.txtSellOptionsOdyssey.Size = new System.Drawing.Size(32, 20);
+            this.txtSellOptionsOdyssey.TabIndex = 91;
+            this.txtSellOptionsOdyssey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tipToolTips.SetToolTip(this.txtSellOptionsOdyssey, "Tooltip-101");
+            this.txtSellOptionsOdyssey.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_Odyssey_KeyPress);
+            // 
+            // lblBuyOptionsOdyssey
+            // 
+            this.lblBuyOptionsOdyssey.AutoSize = true;
+            this.lblBuyOptionsOdyssey.Location = new System.Drawing.Point(226, 139);
+            this.lblBuyOptionsOdyssey.Name = "lblBuyOptionsOdyssey";
+            this.lblBuyOptionsOdyssey.Size = new System.Drawing.Size(50, 13);
+            this.lblBuyOptionsOdyssey.TabIndex = 90;
+            this.lblBuyOptionsOdyssey.Text = "Odyssey:";
+            this.tipToolTips.SetToolTip(this.lblBuyOptionsOdyssey, "Tooltip-100");
+            // 
+            // txtBuyOptionsOdyssey
+            // 
+            this.txtBuyOptionsOdyssey.ContextMenuStrip = this.mnuSetValues;
+            this.txtBuyOptionsOdyssey.Location = new System.Drawing.Point(282, 135);
+            this.txtBuyOptionsOdyssey.MaxLength = 3;
+            this.txtBuyOptionsOdyssey.Name = "txtBuyOptionsOdyssey";
+            this.txtBuyOptionsOdyssey.Size = new System.Drawing.Size(32, 20);
+            this.txtBuyOptionsOdyssey.TabIndex = 89;
+            this.txtBuyOptionsOdyssey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tipToolTips.SetToolTip(this.txtBuyOptionsOdyssey, "Tooltip-101");
+            this.txtBuyOptionsOdyssey.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_Odyssey_KeyPress);
+            // 
+            // lblNavOptionsOdyssey
+            // 
+            this.lblNavOptionsOdyssey.AutoSize = true;
+            this.lblNavOptionsOdyssey.Location = new System.Drawing.Point(224, 141);
+            this.lblNavOptionsOdyssey.Name = "lblNavOptionsOdyssey";
+            this.lblNavOptionsOdyssey.Size = new System.Drawing.Size(50, 13);
+            this.lblNavOptionsOdyssey.TabIndex = 88;
+            this.lblNavOptionsOdyssey.Text = "Odyssey:";
+            this.tipToolTips.SetToolTip(this.lblNavOptionsOdyssey, "Tooltip-101");
+            // 
+            // txtNavOptionsOdyssey
+            // 
+            this.txtNavOptionsOdyssey.ContextMenuStrip = this.mnuSetValues;
+            this.txtNavOptionsOdyssey.Location = new System.Drawing.Point(281, 138);
+            this.txtNavOptionsOdyssey.MaxLength = 3;
+            this.txtNavOptionsOdyssey.Name = "txtNavOptionsOdyssey";
+            this.txtNavOptionsOdyssey.Size = new System.Drawing.Size(32, 20);
+            this.txtNavOptionsOdyssey.TabIndex = 87;
+            this.txtNavOptionsOdyssey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tipToolTips.SetToolTip(this.txtNavOptionsOdyssey, "Tooltip-101");
+            this.txtNavOptionsOdyssey.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_Odyssey_KeyPress);
+            // 
+            // lblLocalOptionsOdyssey
+            // 
+            this.lblLocalOptionsOdyssey.AutoSize = true;
+            this.lblLocalOptionsOdyssey.Location = new System.Drawing.Point(225, 86);
+            this.lblLocalOptionsOdyssey.Name = "lblLocalOptionsOdyssey";
+            this.lblLocalOptionsOdyssey.Size = new System.Drawing.Size(50, 13);
+            this.lblLocalOptionsOdyssey.TabIndex = 108;
+            this.lblLocalOptionsOdyssey.Text = "Odyssey:";
+            this.tipToolTips.SetToolTip(this.lblLocalOptionsOdyssey, "Tooltip-100");
+            // 
+            // txtLocalOptionsOdyssey
+            // 
+            this.txtLocalOptionsOdyssey.ContextMenuStrip = this.mnuSetValues;
+            this.txtLocalOptionsOdyssey.Location = new System.Drawing.Point(280, 84);
+            this.txtLocalOptionsOdyssey.MaxLength = 3;
+            this.txtLocalOptionsOdyssey.Name = "txtLocalOptionsOdyssey";
+            this.txtLocalOptionsOdyssey.Size = new System.Drawing.Size(32, 20);
+            this.txtLocalOptionsOdyssey.TabIndex = 107;
+            this.txtLocalOptionsOdyssey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tipToolTips.SetToolTip(this.txtLocalOptionsOdyssey, "Tooltip-101");
+            this.txtLocalOptionsOdyssey.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_Odyssey_KeyPress);
             // 
             // MainForm
             // 
@@ -4194,6 +4389,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numOldDataOptionsMaxLSDistance)).EndInit();
             this.panRunOptions.ResumeLayout(false);
             this.panRunOptions.PerformLayout();
+            this.panShipVendorOptions.ResumeLayout(false);
+            this.panMarketOptions.ResumeLayout(false);
+            this.panOldDataOptions.ResumeLayout(false);
+            this.panOldDataOptions.PerformLayout();
+            this.grpMarketOptionsType.ResumeLayout(false);
+            this.grpMarketOptionsType.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.pagOutput.ResumeLayout(false);
             this.tabSavedPage1.ResumeLayout(false);
@@ -4234,14 +4435,8 @@
             this.grpRaresOptionsSort.PerformLayout();
             this.panTradeOptions.ResumeLayout(false);
             this.panTradeOptions.PerformLayout();
-            this.panMarketOptions.ResumeLayout(false);
-            this.grpMarketOptionsType.ResumeLayout(false);
-            this.grpMarketOptionsType.PerformLayout();
-            this.panShipVendorOptions.ResumeLayout(false);
             this.panNavOptions.ResumeLayout(false);
             this.panNavOptions.PerformLayout();
-            this.panOldDataOptions.ResumeLayout(false);
-            this.panOldDataOptions.PerformLayout();
             this.panLocalOptions.ResumeLayout(false);
             this.panLocalOptions.PerformLayout();
             this.panOptions.ResumeLayout(false);
@@ -4553,6 +4748,19 @@
         private System.Windows.Forms.TextBox txtNavOptionsFleetCarriers;
         private System.Windows.Forms.Label lblOldDataOptionsFleetCarriers;
         private System.Windows.Forms.TextBox txtOldDataOptionsFleetCarriers;
+        private System.Windows.Forms.Label lblRunOptionsOdyssey;
+        private System.Windows.Forms.TextBox txtRunOptionsOdyssey;
+        private System.Windows.Forms.Label lblOldDataOptionsOdyssey;
+        private System.Windows.Forms.TextBox txtOldDataOptionsOdyssey;
+        private System.Windows.Forms.Label lblRaresOptionsOdyssey;
+        private System.Windows.Forms.TextBox txtRaresOptionsOdyssey;
+        private System.Windows.Forms.TextBox txtSellOptionsOdyssey;
+        private System.Windows.Forms.Label lblBuyOptionsOdyssey;
+        private System.Windows.Forms.TextBox txtBuyOptionsOdyssey;
+        private System.Windows.Forms.Label lblNavOptionsOdyssey;
+        private System.Windows.Forms.TextBox txtNavOptionsOdyssey;
+        private System.Windows.Forms.Label lblLocalOptionsOdyssey;
+        private System.Windows.Forms.TextBox txtLocalOptionsOdyssey;
     }
 }
 

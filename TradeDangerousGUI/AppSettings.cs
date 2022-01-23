@@ -203,6 +203,7 @@ namespace TDHelper
                 settings.MarkedStations = GetStringSetting(configSection, "MarkedStations");
                 settings.MaxGPT = GetDecimalSetting(configSection, "MaxGPT");
                 settings.MaxLSDistance = GetDecimalSetting(configSection, "MaxLSDistance");
+                settings.Odyssey = GetStringSetting(configSection, "Odyssey");
                 settings.Planetary = GetStringSetting(configSection, "Planetary");
                 settings.PruneHops = GetDecimalSetting(configSection, "PruneHops");
                 settings.PruneScore = GetDecimalSetting(configSection, "PruneScore");
@@ -339,6 +340,7 @@ namespace TDHelper
             configSection["MaxGPT"].DecimalValue = settings.MaxGPT;
             configSection["MaxLSDistance"].DecimalValue = settings.MaxLSDistance;
             configSection["NumberOfRoutes"].DecimalValue = settings.NumberOfRoutes;
+            configSection["Odyssey"].StringValue = settings.Odyssey ?? string.Empty;
             configSection["Planetary"].StringValue = settings.Planetary ?? string.Empty;
             configSection["PruneHops"].DecimalValue = settings.PruneHops;
             configSection["PruneScore"].DecimalValue = settings.PruneScore;
@@ -724,6 +726,11 @@ namespace TDHelper
             return ToggleAndSort(text, PLANETARY_FILTER);
         }
 
+        private string ContainsOdyssey(string text)
+        {
+            return ToggleAndSort(text, ODYSSEY_FILTER);
+        }
+
         private string ContainsFleetCarriers(string text)
         {
             return ToggleAndSort(text, FLEET_CARRIERS_FILTER);
@@ -926,6 +933,7 @@ namespace TDHelper
         public string NetLogPath { get; set; }
         public decimal NumberOfRoutes { get; set; }
         public string Padsizes { get; set; }
+        public string Odyssey { get; set; }
         public string Planetary { get; set; }
         public decimal PruneHops { get; set; }
         public decimal PruneScore { get; set; }
@@ -1015,6 +1023,7 @@ namespace TDHelper
             instance.MaxLSDistance = 0;
             instance.MiniModeOnTop = false;
             instance.NetLogPath = string.Empty;
+            instance.Odyssey = string.Empty;
             instance.Padsizes = string.Empty;
             instance.Planetary = string.Empty;
             instance.PruneHops = 0;

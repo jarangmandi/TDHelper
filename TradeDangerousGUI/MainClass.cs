@@ -23,6 +23,7 @@ namespace TDHelper
     {
         public const int API_TIMEOUT = 60;
         public const string ITEM_CSV_FILE = @"data\Item.csv";
+        public const string ODYSSEY_FILTER = "YN?";
         public const string PAD_SIZE_FILTER = "SML?";
         public const string PLANETARY_FILTER = "YN?";
         public const string FLEET_CARRIERS_FILTER = "YN?";
@@ -692,6 +693,7 @@ namespace TDHelper
             ValidateSetting("Stock", numRouteOptionsStock);
             ValidateSetting("UnladenLY", numUnladenLy);
 
+            settingsRef.Odyssey = ContainsOdyssey(settingsRef.Odyssey);
             settingsRef.Padsizes = ContainsPadSizes(settingsRef.Padsizes);
             settingsRef.Planetary = ContainsPlanetary(settingsRef.Planetary);
             settingsRef.FleetCarriers = ContainsFleetCarriers(settingsRef.FleetCarriers);
