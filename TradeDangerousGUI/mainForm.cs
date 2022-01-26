@@ -1356,6 +1356,8 @@ namespace TDHelper
         {
             if (!backgroundWorker7.IsBusy)
             {
+                ShowOutputTab();
+
                 // Cmdr Profile button.
                 buttonCaller = 22;
                 DisablebtnStarts(); // disable buttons during uncancellable operations
@@ -2911,6 +2913,9 @@ namespace TDHelper
             btnStart.Enabled = false;
             btnStationInfo.Enabled = false;
 
+            // Show the "Output" tab.
+            ShowOutputTab();
+
             ProcessCommand();
         }
 
@@ -4277,6 +4282,8 @@ namespace TDHelper
 
                 if (!backgroundWorker4.IsBusy)
                 {
+                    ShowOutputTab();
+                    
                     // UpdateDB Button
                     buttonCaller = 5;
                     DisablebtnStarts(); // disable buttons during uncancellable operations
@@ -4284,6 +4291,14 @@ namespace TDHelper
                     backgroundWorker4.RunWorkerAsync();
                 }
             }
+        }
+
+        /// <summary>
+        /// Shows the "Output" tab
+        /// </summary>
+        public void ShowOutputTab()
+        {
+            tabControl1.SelectedIndex = 0;
         }
 
         /// <summary>
