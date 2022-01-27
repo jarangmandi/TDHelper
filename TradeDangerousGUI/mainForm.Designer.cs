@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             System.Windows.Forms.Label lblSellOptionsOdyssey;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.btnStart = new System.Windows.Forms.Button();
             this.lblRunOptionsDestination = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -282,13 +282,20 @@
             this.txtOldDataOptionsOdyssey = new System.Windows.Forms.TextBox();
             this.lblRaresOptionsOdyssey = new System.Windows.Forms.Label();
             this.txtRaresOptionsOdyssey = new System.Windows.Forms.TextBox();
+            this.txtSellOptionsOdyssey = new System.Windows.Forms.TextBox();
+            this.lblBuyOptionsOdyssey = new System.Windows.Forms.Label();
+            this.txtBuyOptionsOdyssey = new System.Windows.Forms.TextBox();
+            this.lblNavOptionsOdyssey = new System.Windows.Forms.Label();
+            this.txtNavOptionsOdyssey = new System.Windows.Forms.TextBox();
+            this.lblLocalOptionsOdyssey = new System.Windows.Forms.Label();
+            this.txtLocalOptionsOdyssey = new System.Windows.Forms.TextBox();
             this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker4 = new System.ComponentModel.BackgroundWorker();
             this.panRunOptions = new System.Windows.Forms.Panel();
             this.panShipVendorOptions = new System.Windows.Forms.Panel();
             this.panMarketOptions = new System.Windows.Forms.Panel();
-            this.panOldDataOptions = new System.Windows.Forms.Panel();
             this.grpMarketOptionsType = new System.Windows.Forms.GroupBox();
+            this.panOldDataOptions = new System.Windows.Forms.Panel();
             this.lblUpdateNotify = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.pagOutput = new System.Windows.Forms.TabPage();
@@ -338,13 +345,8 @@
             this.panNavOptions = new System.Windows.Forms.Panel();
             this.panLocalOptions = new System.Windows.Forms.Panel();
             this.panOptions = new System.Windows.Forms.Panel();
-            this.txtSellOptionsOdyssey = new System.Windows.Forms.TextBox();
-            this.lblBuyOptionsOdyssey = new System.Windows.Forms.Label();
-            this.txtBuyOptionsOdyssey = new System.Windows.Forms.TextBox();
-            this.lblNavOptionsOdyssey = new System.Windows.Forms.Label();
-            this.txtNavOptionsOdyssey = new System.Windows.Forms.TextBox();
-            this.lblLocalOptionsOdyssey = new System.Windows.Forms.Label();
-            this.txtLocalOptionsOdyssey = new System.Windows.Forms.TextBox();
+            this.tabLastOutput = new System.Windows.Forms.TabPage();
+            this.rtbLastOutput = new System.Windows.Forms.RichTextBox();
             lblSellOptionsOdyssey = new System.Windows.Forms.Label();
             this.mnuSetValues.SuspendLayout();
             this.mnuStrip1.SuspendLayout();
@@ -394,8 +396,8 @@
             this.panRunOptions.SuspendLayout();
             this.panShipVendorOptions.SuspendLayout();
             this.panMarketOptions.SuspendLayout();
-            this.panOldDataOptions.SuspendLayout();
             this.grpMarketOptionsType.SuspendLayout();
+            this.panOldDataOptions.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.pagOutput.SuspendLayout();
             this.tabSavedPage1.SuspendLayout();
@@ -424,7 +426,18 @@
             this.panNavOptions.SuspendLayout();
             this.panLocalOptions.SuspendLayout();
             this.panOptions.SuspendLayout();
+            this.tabLastOutput.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // lblSellOptionsOdyssey
+            // 
+            lblSellOptionsOdyssey.AutoSize = true;
+            lblSellOptionsOdyssey.Location = new System.Drawing.Point(226, 139);
+            lblSellOptionsOdyssey.Name = "lblSellOptionsOdyssey";
+            lblSellOptionsOdyssey.Size = new System.Drawing.Size(50, 13);
+            lblSellOptionsOdyssey.TabIndex = 92;
+            lblSellOptionsOdyssey.Text = "Odyssey:";
+            this.tipToolTips.SetToolTip(lblSellOptionsOdyssey, "Tooltip-101");
             // 
             // btnStart
             // 
@@ -3422,17 +3435,95 @@
             this.lblRaresOptionsOdyssey.Text = "Odyssey:";
             this.tipToolTips.SetToolTip(this.lblRaresOptionsOdyssey, "Tooltip-101");
             // 
-            // textBox1
+            // txtRaresOptionsOdyssey
             // 
             this.txtRaresOptionsOdyssey.ContextMenuStrip = this.mnuSetValues;
             this.txtRaresOptionsOdyssey.Location = new System.Drawing.Point(282, 82);
             this.txtRaresOptionsOdyssey.MaxLength = 3;
-            this.txtRaresOptionsOdyssey.Name = "textBox1";
+            this.txtRaresOptionsOdyssey.Name = "txtRaresOptionsOdyssey";
             this.txtRaresOptionsOdyssey.Size = new System.Drawing.Size(32, 20);
             this.txtRaresOptionsOdyssey.TabIndex = 90;
             this.txtRaresOptionsOdyssey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tipToolTips.SetToolTip(this.txtRaresOptionsOdyssey, "Tooltip-100");
             this.txtRaresOptionsOdyssey.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_Odyssey_KeyPress);
+            // 
+            // txtSellOptionsOdyssey
+            // 
+            this.txtSellOptionsOdyssey.ContextMenuStrip = this.mnuSetValues;
+            this.txtSellOptionsOdyssey.Location = new System.Drawing.Point(282, 135);
+            this.txtSellOptionsOdyssey.MaxLength = 3;
+            this.txtSellOptionsOdyssey.Name = "txtSellOptionsOdyssey";
+            this.txtSellOptionsOdyssey.Size = new System.Drawing.Size(32, 20);
+            this.txtSellOptionsOdyssey.TabIndex = 91;
+            this.txtSellOptionsOdyssey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tipToolTips.SetToolTip(this.txtSellOptionsOdyssey, "Tooltip-101");
+            this.txtSellOptionsOdyssey.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_Odyssey_KeyPress);
+            // 
+            // lblBuyOptionsOdyssey
+            // 
+            this.lblBuyOptionsOdyssey.AutoSize = true;
+            this.lblBuyOptionsOdyssey.Location = new System.Drawing.Point(226, 139);
+            this.lblBuyOptionsOdyssey.Name = "lblBuyOptionsOdyssey";
+            this.lblBuyOptionsOdyssey.Size = new System.Drawing.Size(50, 13);
+            this.lblBuyOptionsOdyssey.TabIndex = 90;
+            this.lblBuyOptionsOdyssey.Text = "Odyssey:";
+            this.tipToolTips.SetToolTip(this.lblBuyOptionsOdyssey, "Tooltip-100");
+            // 
+            // txtBuyOptionsOdyssey
+            // 
+            this.txtBuyOptionsOdyssey.ContextMenuStrip = this.mnuSetValues;
+            this.txtBuyOptionsOdyssey.Location = new System.Drawing.Point(282, 135);
+            this.txtBuyOptionsOdyssey.MaxLength = 3;
+            this.txtBuyOptionsOdyssey.Name = "txtBuyOptionsOdyssey";
+            this.txtBuyOptionsOdyssey.Size = new System.Drawing.Size(32, 20);
+            this.txtBuyOptionsOdyssey.TabIndex = 89;
+            this.txtBuyOptionsOdyssey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tipToolTips.SetToolTip(this.txtBuyOptionsOdyssey, "Tooltip-101");
+            this.txtBuyOptionsOdyssey.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_Odyssey_KeyPress);
+            // 
+            // lblNavOptionsOdyssey
+            // 
+            this.lblNavOptionsOdyssey.AutoSize = true;
+            this.lblNavOptionsOdyssey.Location = new System.Drawing.Point(224, 141);
+            this.lblNavOptionsOdyssey.Name = "lblNavOptionsOdyssey";
+            this.lblNavOptionsOdyssey.Size = new System.Drawing.Size(50, 13);
+            this.lblNavOptionsOdyssey.TabIndex = 88;
+            this.lblNavOptionsOdyssey.Text = "Odyssey:";
+            this.tipToolTips.SetToolTip(this.lblNavOptionsOdyssey, "Tooltip-101");
+            // 
+            // txtNavOptionsOdyssey
+            // 
+            this.txtNavOptionsOdyssey.ContextMenuStrip = this.mnuSetValues;
+            this.txtNavOptionsOdyssey.Location = new System.Drawing.Point(281, 138);
+            this.txtNavOptionsOdyssey.MaxLength = 3;
+            this.txtNavOptionsOdyssey.Name = "txtNavOptionsOdyssey";
+            this.txtNavOptionsOdyssey.Size = new System.Drawing.Size(32, 20);
+            this.txtNavOptionsOdyssey.TabIndex = 87;
+            this.txtNavOptionsOdyssey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tipToolTips.SetToolTip(this.txtNavOptionsOdyssey, "Tooltip-101");
+            this.txtNavOptionsOdyssey.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_Odyssey_KeyPress);
+            // 
+            // lblLocalOptionsOdyssey
+            // 
+            this.lblLocalOptionsOdyssey.AutoSize = true;
+            this.lblLocalOptionsOdyssey.Location = new System.Drawing.Point(225, 86);
+            this.lblLocalOptionsOdyssey.Name = "lblLocalOptionsOdyssey";
+            this.lblLocalOptionsOdyssey.Size = new System.Drawing.Size(50, 13);
+            this.lblLocalOptionsOdyssey.TabIndex = 108;
+            this.lblLocalOptionsOdyssey.Text = "Odyssey:";
+            this.tipToolTips.SetToolTip(this.lblLocalOptionsOdyssey, "Tooltip-100");
+            // 
+            // txtLocalOptionsOdyssey
+            // 
+            this.txtLocalOptionsOdyssey.ContextMenuStrip = this.mnuSetValues;
+            this.txtLocalOptionsOdyssey.Location = new System.Drawing.Point(280, 84);
+            this.txtLocalOptionsOdyssey.MaxLength = 3;
+            this.txtLocalOptionsOdyssey.Name = "txtLocalOptionsOdyssey";
+            this.txtLocalOptionsOdyssey.Size = new System.Drawing.Size(32, 20);
+            this.txtLocalOptionsOdyssey.TabIndex = 107;
+            this.txtLocalOptionsOdyssey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tipToolTips.SetToolTip(this.txtLocalOptionsOdyssey, "Tooltip-101");
+            this.txtLocalOptionsOdyssey.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_Odyssey_KeyPress);
             // 
             // backgroundWorker3
             // 
@@ -3501,6 +3592,18 @@
             this.panMarketOptions.EnabledChanged += new System.EventHandler(this.EventHandler_OptionsPanel_StateChanged);
             this.panMarketOptions.VisibleChanged += new System.EventHandler(this.EventHandler_OptionsPanel_StateChanged);
             // 
+            // grpMarketOptionsType
+            // 
+            this.grpMarketOptionsType.Controls.Add(this.optMarketOptionsAll);
+            this.grpMarketOptionsType.Controls.Add(this.lblMarketOptionsType);
+            this.grpMarketOptionsType.Controls.Add(this.optMarketOptionsBuy);
+            this.grpMarketOptionsType.Controls.Add(this.optMarketOptionsSell);
+            this.grpMarketOptionsType.Location = new System.Drawing.Point(4, 7);
+            this.grpMarketOptionsType.Name = "grpMarketOptionsType";
+            this.grpMarketOptionsType.Size = new System.Drawing.Size(310, 29);
+            this.grpMarketOptionsType.TabIndex = 86;
+            this.grpMarketOptionsType.TabStop = false;
+            // 
             // panOldDataOptions
             // 
             this.panOldDataOptions.Controls.Add(this.lblOldDataOptionsOdyssey);
@@ -3529,18 +3632,6 @@
             this.panOldDataOptions.EnabledChanged += new System.EventHandler(this.EventHandler_OptionsPanel_StateChanged);
             this.panOldDataOptions.VisibleChanged += new System.EventHandler(this.EventHandler_OptionsPanel_StateChanged);
             // 
-            // grpMarketOptionsType
-            // 
-            this.grpMarketOptionsType.Controls.Add(this.optMarketOptionsAll);
-            this.grpMarketOptionsType.Controls.Add(this.lblMarketOptionsType);
-            this.grpMarketOptionsType.Controls.Add(this.optMarketOptionsBuy);
-            this.grpMarketOptionsType.Controls.Add(this.optMarketOptionsSell);
-            this.grpMarketOptionsType.Location = new System.Drawing.Point(4, 7);
-            this.grpMarketOptionsType.Name = "grpMarketOptionsType";
-            this.grpMarketOptionsType.Size = new System.Drawing.Size(310, 29);
-            this.grpMarketOptionsType.TabIndex = 86;
-            this.grpMarketOptionsType.TabStop = false;
-            // 
             // lblUpdateNotify
             // 
             this.lblUpdateNotify.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -3560,6 +3651,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.pagOutput);
+            this.tabControl1.Controls.Add(this.tabLastOutput);
             this.tabControl1.Controls.Add(this.tabSavedPage1);
             this.tabControl1.Controls.Add(this.tabSavedPage2);
             this.tabControl1.Controls.Add(this.tabSavedPage3);
@@ -3802,7 +3894,6 @@
             // 
             // panSellOptions
             // 
-            this.panSellOptions.Controls.Add(this.panMarketOptions);
             this.panSellOptions.Controls.Add(lblSellOptionsOdyssey);
             this.panSellOptions.Controls.Add(this.txtSellOptionsOdyssey);
             this.panSellOptions.Controls.Add(this.lblSellOptionsFleetCarriers);
@@ -3848,7 +3939,6 @@
             // 
             // panBuyOptions
             // 
-            this.panBuyOptions.Controls.Add(this.panSellOptions);
             this.panBuyOptions.Controls.Add(this.lblBuyOptionsOdyssey);
             this.panBuyOptions.Controls.Add(this.txtBuyOptionsOdyssey);
             this.panBuyOptions.Controls.Add(this.lblBuyOptionsFleetCarriers);
@@ -4135,7 +4225,6 @@
             // 
             // panTradeOptions
             // 
-            this.panTradeOptions.Controls.Add(this.panBuyOptions);
             this.panTradeOptions.Controls.Add(this.btnTradeOptionsSwap);
             this.panTradeOptions.Controls.Add(this.lblTradeOptionDestination);
             this.panTradeOptions.Controls.Add(this.cboTradeOptionDestination);
@@ -4222,99 +4311,38 @@
             this.panOptions.Controls.Add(this.panSellOptions);
             this.panOptions.Controls.Add(this.panBuyOptions);
             this.panOptions.Controls.Add(this.panTradeOptions);
-            this.panOptions.Controls.Add(this.panNavOptions); this.panOptions.Controls.Add(this.panLocalOptions);
+            this.panOptions.Controls.Add(this.panNavOptions);
+            this.panOptions.Controls.Add(this.panLocalOptions);
             this.panOptions.Location = new System.Drawing.Point(10, 33);
             this.panOptions.Name = "panOptions";
             this.panOptions.Size = new System.Drawing.Size(322, 197);
             this.panOptions.TabIndex = 1;
             // 
-            // lblSellOptionsOdyssey
+            // tabLastOutput
             // 
-            lblSellOptionsOdyssey.AutoSize = true;
-            lblSellOptionsOdyssey.Location = new System.Drawing.Point(226, 139);
-            lblSellOptionsOdyssey.Name = "lblSellOptionsOdyssey";
-            lblSellOptionsOdyssey.Size = new System.Drawing.Size(50, 13);
-            lblSellOptionsOdyssey.TabIndex = 92;
-            lblSellOptionsOdyssey.Text = "Odyssey:";
-            this.tipToolTips.SetToolTip(lblSellOptionsOdyssey, "Tooltip-101");
+            this.tabLastOutput.Controls.Add(this.rtbLastOutput);
+            this.tabLastOutput.Location = new System.Drawing.Point(4, 22);
+            this.tabLastOutput.Name = "tabLastOutput";
+            this.tabLastOutput.Padding = new System.Windows.Forms.Padding(3);
+            this.tabLastOutput.Size = new System.Drawing.Size(847, 184);
+            this.tabLastOutput.TabIndex = 6;
+            this.tabLastOutput.Text = "Last Output";
+            this.tabLastOutput.UseVisualStyleBackColor = true;
             // 
-            // txtSellOptionsOdyssey
+            // rtbLastOutput
             // 
-            this.txtSellOptionsOdyssey.ContextMenuStrip = this.mnuSetValues;
-            this.txtSellOptionsOdyssey.Location = new System.Drawing.Point(282, 135);
-            this.txtSellOptionsOdyssey.MaxLength = 3;
-            this.txtSellOptionsOdyssey.Name = "txtSellOptionsOdyssey";
-            this.txtSellOptionsOdyssey.Size = new System.Drawing.Size(32, 20);
-            this.txtSellOptionsOdyssey.TabIndex = 91;
-            this.txtSellOptionsOdyssey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tipToolTips.SetToolTip(this.txtSellOptionsOdyssey, "Tooltip-101");
-            this.txtSellOptionsOdyssey.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_Odyssey_KeyPress);
-            // 
-            // lblBuyOptionsOdyssey
-            // 
-            this.lblBuyOptionsOdyssey.AutoSize = true;
-            this.lblBuyOptionsOdyssey.Location = new System.Drawing.Point(226, 139);
-            this.lblBuyOptionsOdyssey.Name = "lblBuyOptionsOdyssey";
-            this.lblBuyOptionsOdyssey.Size = new System.Drawing.Size(50, 13);
-            this.lblBuyOptionsOdyssey.TabIndex = 90;
-            this.lblBuyOptionsOdyssey.Text = "Odyssey:";
-            this.tipToolTips.SetToolTip(this.lblBuyOptionsOdyssey, "Tooltip-100");
-            // 
-            // txtBuyOptionsOdyssey
-            // 
-            this.txtBuyOptionsOdyssey.ContextMenuStrip = this.mnuSetValues;
-            this.txtBuyOptionsOdyssey.Location = new System.Drawing.Point(282, 135);
-            this.txtBuyOptionsOdyssey.MaxLength = 3;
-            this.txtBuyOptionsOdyssey.Name = "txtBuyOptionsOdyssey";
-            this.txtBuyOptionsOdyssey.Size = new System.Drawing.Size(32, 20);
-            this.txtBuyOptionsOdyssey.TabIndex = 89;
-            this.txtBuyOptionsOdyssey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tipToolTips.SetToolTip(this.txtBuyOptionsOdyssey, "Tooltip-101");
-            this.txtBuyOptionsOdyssey.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_Odyssey_KeyPress);
-            // 
-            // lblNavOptionsOdyssey
-            // 
-            this.lblNavOptionsOdyssey.AutoSize = true;
-            this.lblNavOptionsOdyssey.Location = new System.Drawing.Point(224, 141);
-            this.lblNavOptionsOdyssey.Name = "lblNavOptionsOdyssey";
-            this.lblNavOptionsOdyssey.Size = new System.Drawing.Size(50, 13);
-            this.lblNavOptionsOdyssey.TabIndex = 88;
-            this.lblNavOptionsOdyssey.Text = "Odyssey:";
-            this.tipToolTips.SetToolTip(this.lblNavOptionsOdyssey, "Tooltip-101");
-            // 
-            // txtNavOptionsOdyssey
-            // 
-            this.txtNavOptionsOdyssey.ContextMenuStrip = this.mnuSetValues;
-            this.txtNavOptionsOdyssey.Location = new System.Drawing.Point(281, 138);
-            this.txtNavOptionsOdyssey.MaxLength = 3;
-            this.txtNavOptionsOdyssey.Name = "txtNavOptionsOdyssey";
-            this.txtNavOptionsOdyssey.Size = new System.Drawing.Size(32, 20);
-            this.txtNavOptionsOdyssey.TabIndex = 87;
-            this.txtNavOptionsOdyssey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tipToolTips.SetToolTip(this.txtNavOptionsOdyssey, "Tooltip-101");
-            this.txtNavOptionsOdyssey.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_Odyssey_KeyPress);
-            // 
-            // lblLocalOptionsOdyssey
-            // 
-            this.lblLocalOptionsOdyssey.AutoSize = true;
-            this.lblLocalOptionsOdyssey.Location = new System.Drawing.Point(225, 86);
-            this.lblLocalOptionsOdyssey.Name = "lblLocalOptionsOdyssey";
-            this.lblLocalOptionsOdyssey.Size = new System.Drawing.Size(50, 13);
-            this.lblLocalOptionsOdyssey.TabIndex = 108;
-            this.lblLocalOptionsOdyssey.Text = "Odyssey:";
-            this.tipToolTips.SetToolTip(this.lblLocalOptionsOdyssey, "Tooltip-100");
-            // 
-            // txtLocalOptionsOdyssey
-            // 
-            this.txtLocalOptionsOdyssey.ContextMenuStrip = this.mnuSetValues;
-            this.txtLocalOptionsOdyssey.Location = new System.Drawing.Point(280, 84);
-            this.txtLocalOptionsOdyssey.MaxLength = 3;
-            this.txtLocalOptionsOdyssey.Name = "txtLocalOptionsOdyssey";
-            this.txtLocalOptionsOdyssey.Size = new System.Drawing.Size(32, 20);
-            this.txtLocalOptionsOdyssey.TabIndex = 107;
-            this.txtLocalOptionsOdyssey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tipToolTips.SetToolTip(this.txtLocalOptionsOdyssey, "Tooltip-101");
-            this.txtLocalOptionsOdyssey.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EventHandler_Odyssey_KeyPress);
+            this.rtbLastOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rtbLastOutput.ContextMenuStrip = this.mnuStrip1;
+            this.rtbLastOutput.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbLastOutput.Location = new System.Drawing.Point(3, 5);
+            this.rtbLastOutput.Name = "rtbLastOutput";
+            this.rtbLastOutput.ReadOnly = true;
+            this.rtbLastOutput.Size = new System.Drawing.Size(841, 175);
+            this.rtbLastOutput.TabIndex = 1;
+            this.rtbLastOutput.TabStop = false;
+            this.rtbLastOutput.Text = "";
             // 
             // MainForm
             // 
@@ -4391,10 +4419,10 @@
             this.panRunOptions.PerformLayout();
             this.panShipVendorOptions.ResumeLayout(false);
             this.panMarketOptions.ResumeLayout(false);
-            this.panOldDataOptions.ResumeLayout(false);
-            this.panOldDataOptions.PerformLayout();
             this.grpMarketOptionsType.ResumeLayout(false);
             this.grpMarketOptionsType.PerformLayout();
+            this.panOldDataOptions.ResumeLayout(false);
+            this.panOldDataOptions.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.pagOutput.ResumeLayout(false);
             this.tabSavedPage1.ResumeLayout(false);
@@ -4440,6 +4468,7 @@
             this.panLocalOptions.ResumeLayout(false);
             this.panLocalOptions.PerformLayout();
             this.panOptions.ResumeLayout(false);
+            this.tabLastOutput.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4761,6 +4790,8 @@
         private System.Windows.Forms.TextBox txtNavOptionsOdyssey;
         private System.Windows.Forms.Label lblLocalOptionsOdyssey;
         private System.Windows.Forms.TextBox txtLocalOptionsOdyssey;
+        private System.Windows.Forms.TabPage tabLastOutput;
+        private System.Windows.Forms.RichTextBox rtbLastOutput;
     }
 }
 

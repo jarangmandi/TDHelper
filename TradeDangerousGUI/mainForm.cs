@@ -73,6 +73,7 @@ namespace TDHelper
         private string savedFile1 = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "saved_1.txt");
         private string savedFile2 = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "saved_2.txt");
         private string savedFile3 = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "saved_3.txt");
+        private string lastOutputFile = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "last_output.txt");
         private string SelectedCommodity = string.Empty;
         private List<string> ShipList = new List<string>();
         private string SourceSystem = string.Empty;
@@ -83,6 +84,14 @@ namespace TDHelper
         private string tv_outputBox = string.Empty;
         private CultureInfo userCulture = CultureInfo.CurrentCulture;
         private IList<ComboBoxItem> validConfigs = new List<ComboBoxItem>();
+
+        private const int TAB_OUTPUT = 0;
+        private const int TAB_LAST_OUTPUT = 1;
+        private const int TAB_SAVED_1 = 2;
+        private const int TAB_SAVED_2 = 3;
+        private const int TAB_SAVED_3 = 4;
+        private const int TAB_NOTES = 5;
+        private const int TAB_PILOTS_LOG = 6;
 
         public MainForm()
         {
@@ -1390,7 +1399,8 @@ namespace TDHelper
             else if (clickedControl.Name == rtbSaved1.Name
                 || clickedControl.Name == rtbSaved2.Name
                 || clickedControl.Name == rtbSaved3.Name
-                || clickedControl.Name == rtbOutput.Name)
+                || clickedControl.Name == rtbOutput.Name
+                || clickedControl.Name == rtbLastOutput.Name)
             {
                 mnuCut.Enabled = false;
                 mnuDelete.Enabled = false;
@@ -2975,7 +2985,7 @@ namespace TDHelper
                 txtNotes.SaveFile(notesFile, RichTextBoxStreamType.PlainText);
             }
 
-            if (tabControl1.SelectedIndex == 0 &&
+            if (tabControl1.SelectedIndex == TAB_OUTPUT &&
                 !string.IsNullOrEmpty(rtbOutput.Text))
             {
                 CheckForParsableOutput(rtbOutput);
@@ -2984,22 +2994,27 @@ namespace TDHelper
 
                 pagOutput.Font = new Font(pagOutput.Font, FontStyle.Regular); // reset the font
             }
-            else if (tabControl1.SelectedIndex == 4 &&
+            else if (tabControl1.SelectedIndex == TAB_LAST_OUTPUT &&
+                CheckIfFileOpens(lastOutputFile))
+            {
+                LoadFileIntoPage(lastOutputFile, rtbLastOutput);
+            }
+            else if (tabControl1.SelectedIndex == TAB_NOTES &&
                 CheckIfFileOpens(notesFile))
             {
                 txtNotes.LoadFile(notesFile, RichTextBoxStreamType.PlainText);
 
                 txtNotes.Focus();
             }
-            else if (tabControl1.SelectedIndex == 1)
+            else if (tabControl1.SelectedIndex == TAB_SAVED_1)
             {
                 LoadFileIntoPage(savedFile1, rtbSaved1);
             }
-            else if (tabControl1.SelectedIndex == 2)
+            else if (tabControl1.SelectedIndex == TAB_SAVED_2)
             {
                 LoadFileIntoPage(savedFile2, rtbSaved2);
             }
-            else if (tabControl1.SelectedIndex == 3)
+            else if (tabControl1.SelectedIndex == TAB_SAVED_3)
             {
                 LoadFileIntoPage(savedFile3, rtbSaved3);
             }
@@ -4298,8 +4313,18 @@ namespace TDHelper
         /// </summary>
         public void ShowOutputTab()
         {
+            CopyOutputToLastOutput();
             tabControl1.SelectedIndex = 0;
         }
+
+        /// <summary>
+        /// Copies "Output" tab content to "Last Output" tab.
+        /// </summary>
+        private void CopyOutputToLastOutput()
+        {
+            WriteSavedPage(rtbOutput.Text, lastOutputFile);
+        }
+
 
         /// <summary>
         /// Show or hide the specified options panel.
