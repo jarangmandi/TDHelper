@@ -1608,6 +1608,11 @@ namespace TDHelper
                 if (shorten != null)
                 {
                     shorten.Enabled = destination.Text.Length > 0;
+
+                    if (!shorten.Enabled)
+                    {
+                        shorten.Checked = false;
+                    }
                 }
 
                 RefreshingDestinations = false;
