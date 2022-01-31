@@ -2887,6 +2887,18 @@ namespace TDHelper
             }
         }
 
+
+        /// <summary>
+        /// Event handler.
+        /// </summary>
+        /// <param name="sender">The sender object.</param>
+        /// <param name="e">The event arguments.</param>
+        private void cboSourceSystem_TextChanged(object sender, EventArgs e)
+        {
+            SetStationInfoButtonState();
+        }
+
+
         /// <summary>
         /// Event handler.
         /// </summary>
@@ -4245,7 +4257,7 @@ namespace TDHelper
                 // ...then the button is enable if a source system/station is selected.
                 string[] data = cboSourceSystem.Text.Split(new string[] { "/" }, StringSplitOptions.RemoveEmptyEntries);
 
-                btnStationInfo.Enabled = data.Length == 2 && data[0].Length > 3 & data[1].Length > 3;
+                    btnStationInfo.Enabled = data.Length == 2 && data[0].Length >= 3 & data[1].Length >= 3;
             }
             else
             {
@@ -4487,5 +4499,6 @@ namespace TDHelper
                 control.DecimalPlaces = dp;
             }
         }
+
     }
 }
