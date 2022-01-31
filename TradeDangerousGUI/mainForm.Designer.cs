@@ -300,6 +300,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.pagOutput = new System.Windows.Forms.TabPage();
             this.rtbOutput = new System.Windows.Forms.RichTextBox();
+            this.tabLastOutput = new System.Windows.Forms.TabPage();
+            this.rtbLastOutput = new System.Windows.Forms.RichTextBox();
             this.tabSavedPage1 = new System.Windows.Forms.TabPage();
             this.rtbSaved1 = new System.Windows.Forms.RichTextBox();
             this.tabSavedPage2 = new System.Windows.Forms.TabPage();
@@ -345,8 +347,6 @@
             this.panNavOptions = new System.Windows.Forms.Panel();
             this.panLocalOptions = new System.Windows.Forms.Panel();
             this.panOptions = new System.Windows.Forms.Panel();
-            this.tabLastOutput = new System.Windows.Forms.TabPage();
-            this.rtbLastOutput = new System.Windows.Forms.RichTextBox();
             lblSellOptionsOdyssey = new System.Windows.Forms.Label();
             this.mnuSetValues.SuspendLayout();
             this.mnuStrip1.SuspendLayout();
@@ -400,6 +400,7 @@
             this.panOldDataOptions.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.pagOutput.SuspendLayout();
+            this.tabLastOutput.SuspendLayout();
             this.tabSavedPage1.SuspendLayout();
             this.tabSavedPage2.SuspendLayout();
             this.tabSavedPage3.SuspendLayout();
@@ -426,7 +427,6 @@
             this.panNavOptions.SuspendLayout();
             this.panLocalOptions.SuspendLayout();
             this.panOptions.SuspendLayout();
-            this.tabLastOutput.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblSellOptionsOdyssey
@@ -1446,7 +1446,7 @@
             this.numRouteOptionsStock.TabIndex = 0;
             this.numRouteOptionsStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numRouteOptionsStock.ThousandsSeparator = true;
-            this.tipToolTips.SetToolTip(this.numRouteOptionsStock, "Tooltip-091");
+            this.tipToolTips.SetToolTip(this.numRouteOptionsStock, "Tooltip-092");
             this.numRouteOptionsStock.Enter += new System.EventHandler(this.EventHandler_NumericUpDown_Enter);
             this.numRouteOptionsStock.MouseUp += new System.Windows.Forms.MouseEventHandler(this.EventHandler_NumericUpDown_MouseUp);
             // 
@@ -1458,7 +1458,7 @@
             this.lblStock.Size = new System.Drawing.Size(50, 13);
             this.lblStock.TabIndex = 57;
             this.lblStock.Text = "    Stock:";
-            this.tipToolTips.SetToolTip(this.lblStock, "Tooltip-091");
+            this.tipToolTips.SetToolTip(this.lblStock, "Tooltip-092");
             // 
             // lblRunOptionsLoopInt
             // 
@@ -3692,6 +3692,32 @@
             this.rtbOutput.Text = "";
             this.rtbOutput.TextChanged += new System.EventHandler(this.EventHandler_Td_outputBox_TextChanged);
             // 
+            // tabLastOutput
+            // 
+            this.tabLastOutput.Controls.Add(this.rtbLastOutput);
+            this.tabLastOutput.Location = new System.Drawing.Point(4, 22);
+            this.tabLastOutput.Name = "tabLastOutput";
+            this.tabLastOutput.Padding = new System.Windows.Forms.Padding(3);
+            this.tabLastOutput.Size = new System.Drawing.Size(847, 184);
+            this.tabLastOutput.TabIndex = 6;
+            this.tabLastOutput.Text = "Last Output";
+            this.tabLastOutput.UseVisualStyleBackColor = true;
+            // 
+            // rtbLastOutput
+            // 
+            this.rtbLastOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rtbLastOutput.ContextMenuStrip = this.mnuStrip1;
+            this.rtbLastOutput.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbLastOutput.Location = new System.Drawing.Point(3, 5);
+            this.rtbLastOutput.Name = "rtbLastOutput";
+            this.rtbLastOutput.ReadOnly = true;
+            this.rtbLastOutput.Size = new System.Drawing.Size(841, 175);
+            this.rtbLastOutput.TabIndex = 1;
+            this.rtbLastOutput.TabStop = false;
+            this.rtbLastOutput.Text = "";
+            // 
             // tabSavedPage1
             // 
             this.tabSavedPage1.Controls.Add(this.rtbSaved1);
@@ -4318,32 +4344,6 @@
             this.panOptions.Size = new System.Drawing.Size(322, 197);
             this.panOptions.TabIndex = 1;
             // 
-            // tabLastOutput
-            // 
-            this.tabLastOutput.Controls.Add(this.rtbLastOutput);
-            this.tabLastOutput.Location = new System.Drawing.Point(4, 22);
-            this.tabLastOutput.Name = "tabLastOutput";
-            this.tabLastOutput.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLastOutput.Size = new System.Drawing.Size(847, 184);
-            this.tabLastOutput.TabIndex = 6;
-            this.tabLastOutput.Text = "Last Output";
-            this.tabLastOutput.UseVisualStyleBackColor = true;
-            // 
-            // rtbLastOutput
-            // 
-            this.rtbLastOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtbLastOutput.ContextMenuStrip = this.mnuStrip1;
-            this.rtbLastOutput.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbLastOutput.Location = new System.Drawing.Point(3, 5);
-            this.rtbLastOutput.Name = "rtbLastOutput";
-            this.rtbLastOutput.ReadOnly = true;
-            this.rtbLastOutput.Size = new System.Drawing.Size(841, 175);
-            this.rtbLastOutput.TabIndex = 1;
-            this.rtbLastOutput.TabStop = false;
-            this.rtbLastOutput.Text = "";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4425,6 +4425,7 @@
             this.panOldDataOptions.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.pagOutput.ResumeLayout(false);
+            this.tabLastOutput.ResumeLayout(false);
             this.tabSavedPage1.ResumeLayout(false);
             this.tabSavedPage2.ResumeLayout(false);
             this.tabSavedPage3.ResumeLayout(false);
@@ -4468,7 +4469,6 @@
             this.panLocalOptions.ResumeLayout(false);
             this.panLocalOptions.PerformLayout();
             this.panOptions.ResumeLayout(false);
-            this.tabLastOutput.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
