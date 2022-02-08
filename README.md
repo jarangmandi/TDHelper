@@ -1,3 +1,11 @@
+## 2022.02.08
+
+Trade Dangerous Helper has a new home! Unfortunately Cmdr Austen is no longer able to maintain this wonderful tool and the most recent release was some two and a half years ago, since when Elite: Dangerous has seen many updates.
+Fleet Carriers are new, Odyssey settlements are new, and the underlying tradedangerous program has moved on to support these updates. Until now, TDH hasn't.'
+I now, stepping on the shoulders of giants, have taken on the mantle of maintaining it. 
+
+Cmdr JarangMandi
+
 ## 2018.06.26
 
 Trade Dangerous Helper has been updated. The excellent maddavo plugin stopped working some months ago and Cmdr eyeonus wrote a new plugin that pulls data either from a server mainained by Cmdr Tromador or from the EDDB server as a fallback. This new pugin, EDDBlink, allowed TD Helper to work again but not as an integrated system. I have, therefore, updated TD Helper, removing all the maddavo plugin calls and substituting the EDDBlink plugin call allowing TD Helper to work again as intended. There were a few other bugs that got squished in the process.
@@ -13,7 +21,7 @@ Trade Dangerous Helper
 ======================
 Copyright under the MIT License (C) 2015, Jon Wrights
 
-## FAQ page is [HERE](https://github.com/MarkAusten/TDHelper/wiki/Frequently-Asked-Questions) ##
+## FAQ page is [HERE](https://github.com/JarangMandi/TDHelper/wiki/Frequently-Asked-Questions) ##
 
 What is this tool supposed to do?
 =================================

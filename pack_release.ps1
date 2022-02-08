@@ -1,8 +1,8 @@
 $datetime = Get-Date -f MMddyy
-$binpath = "c:\Development\Published\TDGUI"
+$binpath = "D:\Projects\TDHelper"
 $outfiles = "$binpath\storage\TDHelper-src-$datetime.zip"
 $7zpath = "C:\Program Files\7-Zip\7z.exe"
-$scriptPath = "c:\Development\TDHelper"
+$scriptPath = "D:\Users\andre\Development\TDHelper"
 
 # don't change this START
 $srcpath = "$scriptPath\TradeDangerousGUI"
@@ -52,7 +52,7 @@ if (($binaries.count -gt 0) -and (Test-Path $binpath))
     # clean up
     cmd /c rmdir /s /q $packpath
 
-    cmd /c $binpath\TDHelper.exe /g "https://github.com/MarkAusten/TDHelper/releases/download/v$callFileVersion/TDHelper-v$callFileVersion.zip"
+    cmd /c $binpath\TDHelper.exe /g "https://github.com/JarangMandi/TDHelper/releases/download/v$callFileVersion/TDHelper-v$callFileVersion.zip"
 }
 else
 {

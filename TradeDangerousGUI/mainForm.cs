@@ -1747,7 +1747,7 @@ namespace TDHelper
             object sender,
             LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://github.com/MarkAusten/TDHelper/wiki/Home");
+            Process.Start("https://github.com/JarangMandi/TDHelper/wiki/Home");
         }
 
         /// <summary>
@@ -3117,7 +3117,7 @@ namespace TDHelper
             object sender,
             LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://github.com/MarkAusten/TDHelper/issues/new");
+            Process.Start("https://github.com/JarangMandi/TDHelper/issues/new");
         }
 
         /// <summary>
