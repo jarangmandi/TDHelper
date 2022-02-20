@@ -3162,6 +3162,7 @@ namespace TDHelper
                 cmdPath += AddNumericOption(numBuyOptionsAbove.Value, "gt");
                 cmdPath += AddNumericOption(numBuyOptionsBelow.Value, "lt");
                 cmdPath += AddNumericOption(numBuyOptionsSupply.Value, "supply");
+                cmdPath += AddNumericOption(numBuyOptionsMaxLS.Value, "ls-max");
 
                 cmdPath += AddCheckedOption(chkBuyOptionsBlkMkt.Checked, "bm");
                 cmdPath += AddCheckedOption(chkBuyOptionsOneStop.Checked, "one-stop");
