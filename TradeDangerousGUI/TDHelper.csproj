@@ -209,6 +209,7 @@
     </Compile>
     <Compile Include="ShipsConfigMap.cs" />
     <Compile Include="Utilities.cs" />
+    <Compile Include="VersionComparer.cs" />
     <EmbeddedResource Include="DbMaintenanceForm.resx">
       <DependentUpon>DbMaintenanceForm.cs</DependentUpon>
     </EmbeddedResource>
