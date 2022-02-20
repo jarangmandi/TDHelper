@@ -510,7 +510,7 @@ namespace TDHelper
                     string currentVersion = ((JObject)jo["releases"])
                         .Properties()
                         .Select(p => p.Name)
-                        .OrderByDescending(x => x)
+                        .OrderByDescending(x => x, new VersionComparer())
                         .First();
 
                     Version current = new Version(currentVersion);
