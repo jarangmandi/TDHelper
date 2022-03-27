@@ -1,7 +1,7 @@
 ## 2022.02.08
 
 Trade Dangerous Helper has a new home! Unfortunately Cmdr Austen is no longer able to maintain this wonderful tool and the most recent release was some two and a half years ago, since when Elite: Dangerous has seen many updates.
-Fleet Carriers are new, Odyssey settlements are new, and the underlying tradedangerous program has moved on to support these updates. Until now, TDH hasn't.'
+Fleet Carriers are new, Odyssey settlements are new, and the underlying tradedangerous program has moved on to support these updates. Until now, TDH hasn't.
 I now, stepping on the shoulders of giants, have taken on the mantle of maintaining it. 
 
 Cmdr JarangMandi
